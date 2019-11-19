@@ -7,7 +7,7 @@ class Users {
         $result = _MainModel::table("users_cards")->get()->send();}
 
     public function MyMetod(){
-    	$string =$_GET['Hellow'];}
+    	$string =$_GET'Hellow';}
 
          // _MainModel::$string;   
     }
