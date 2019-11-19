@@ -9,12 +9,10 @@
 
 class MainPresenter {
 
-	function __construct (){
-		$r = new ReflectionClass($this);
-        $name_class = $r->name;
+	function __construct (){ }
 
-          	echo (new UsersTokens())->isSecurity(); 
-        
+	public function isSecurity(){
+		return (new UsersTokens())->isSecurity();
 	}
 
 	public function renderLabel ($folder, $file){
