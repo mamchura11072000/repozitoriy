@@ -8,7 +8,7 @@ class Users {
 
     public function MyMetod(){$string =_MainModel::$_GET["Hellow"];}
 
-           _MainModel::($string);   
+          // _MainModel::($string);   
     }
 
 }
