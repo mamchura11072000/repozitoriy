@@ -9,19 +9,16 @@
 
 class Testpresenter extends MainPresenter {
 
+public function MyMetod(){
+       $a = $_GET['a'];
+       $b = $_GET['b'];
+       $c = $_GET['c'];
+       $summa = $a + $b + $c;
+echo "Сумма $a + $b + $c = $summa";}
+
+
 	public function getListUsers(){ echo (new Users())->getListUsers();}
-
-    public function MyMetod(){echo ($result1)->MyMetod();}
-
-
-
-
-
 	public function addCardsUser(){echo (new Users()->addCardsUser();}
-
-
-
-
 
 	/* labels */
 	public function ruLableTable(){ $this->renderLabel('rus', 'labelLayoutTable'); }
