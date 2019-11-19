@@ -13,9 +13,8 @@ class MainPresenter {
 		$r = new ReflectionClass($this);
         $name_class = $r->name;
 
-        if($name_class::$isSecurity){
-        	echo (new UsersTokens())->isSecurity(); 
-        }
+          	echo (new UsersTokens())->isSecurity(); 
+        
 	}
 
 	public function renderLabel ($folder, $file){
