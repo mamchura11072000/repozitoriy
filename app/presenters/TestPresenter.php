@@ -9,7 +9,7 @@
 
 class Testpresenter extends MainPresenter {
 
-public function MyMetod(){echo ("Сумма $a + $b + $c = $summa")->MyMetod();}
+public function MyMetod(){echo ($string)->MyMetod();}
 
 
 	public function getListUsers(){ echo (new Users())->getListUsers();}
