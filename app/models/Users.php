@@ -9,7 +9,7 @@ class Users {
     public function MyMetod(){
         $a=5;
         $b=7;
-    	$result1=$a+$b;
+    	$result1=_MainModel::($a+$b);
     	}
 
 
