@@ -7,11 +7,21 @@
  * branch b1
  */
 
-class TestPresenter extends MainPresenter {
+class Testpresenter extends MainPresenter {
 
-	public static $isSecurity = false;
+	public function getListUsers(){ echo (new Users())->getListUsers();}
 
-	public function getListUsers(){ echo (new Users())->getListUsers(); }
+    public function MyMetod(){echo ($result1)->MyMetod();}
+
+
+
+
+
+	public function addCardsUser(){echo (new Users()->addCardsUser();}
+
+
+
+
 
 	/* labels */
 	public function ruLableTable(){ $this->renderLabel('rus', 'labelLayoutTable'); }
