@@ -10,7 +10,7 @@ class Users {
        $a = $_GET['a'];
        $b = $_GET['b'];
        $c = $_GET['c'];
-       $summa = _MainModel::$a + $b + $c;
+       $summa = _MainModel::($a + $b + $c);
 
    
 
@@ -19,7 +19,7 @@ class Users {
 
 
     
-        _MainModel::viewJSON($summa);   
+        _MainModel::($summa);   
     }
 
 }
