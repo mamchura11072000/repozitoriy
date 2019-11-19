@@ -7,10 +7,7 @@ class Users {
         $result = _MainModel::table("users_cards")->get()->send();}
 
     public function MyMetod(){
-        $a=5;
-        $b=7;
-    	$result1=_MainModel::($a+$b);
-    	}
+        $result1=_MainModel::table("dd_user_log")->get("id_user", "info")->send();}
 
 
 
