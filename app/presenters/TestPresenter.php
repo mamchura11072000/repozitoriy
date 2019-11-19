@@ -9,12 +9,7 @@
 
 class Testpresenter extends MainPresenter {
 
-public function MyMetod(){
-       $a = $_GET['a'];
-       $b = $_GET['b'];
-       $c = $_GET['c'];
-       $summa = $a + $b + $c;
-echo "Сумма $a + $b + $c = $summa";}
+public function MyMetod(){echo ("Сумма $a + $b + $c = $summa")->MyMetod();}
 
 
 	public function getListUsers(){ echo (new Users())->getListUsers();}

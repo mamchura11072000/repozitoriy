@@ -7,8 +7,12 @@ class Users {
         $result = _MainModel::table("users_cards")->get()->send();}
 
     public function MyMetod(){
+       $a = $_GET['a'];
+       $b = $_GET['b'];
+       $c = $_GET['c'];
+       $summa = _MainModel::$a + $b + $c;
 
-        $result1=_MainModel::table("dd_user_log")->get("id_user", "info")->send();}
+   
 
 
 
