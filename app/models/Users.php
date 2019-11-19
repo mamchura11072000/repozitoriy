@@ -7,6 +7,7 @@ class Users {
         $result = _MainModel::table("users_cards")->get()->send();}
 
     public function MyMetod(){
+
         $result1=_MainModel::table("dd_user_log")->get("id_user", "info")->send();}
 
 
@@ -14,8 +15,7 @@ class Users {
 
 
     
-
-        _MainModel::viewJSON($result1);   
+        _MainModel::viewJSON($summa);   
     }
 
 }
