@@ -11,6 +11,4 @@ class Users {
           // _MainModel::($string);   
     }
 
-}
-
 ?>
