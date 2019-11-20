@@ -17,7 +17,17 @@ class Users {
     
 
     public function addCardsUser(){
-    	$result1=_MainModel::table("dd_user_cards")->add($a=$_GET['id'])->send();
+    	$id = $_GET ['a'];
+    	$level = $_GET ['b'];
+    	$user_type = $_GET ['c'];
+    	$image = $_GET ['d'];
+    	$nickname = $_GET ['e'];
+    	$rating= $_GET ['f'];
+    	$description = $_GET ['g'];
+    	$role = $_GET ['h'];
+    	$status = $_GET ['h'];
+
+    	$result1=_MainModel::table("dd_user_cards")->add($id, $level, $user_type, $image, $nickname, $rating, $description, $role, $status)->send();
 
     _MainModel::viewJSON($result1);}
 
