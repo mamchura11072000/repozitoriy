@@ -17,12 +17,13 @@ class Users {
     
 
     public function addCardsUser(){
-    	$result1=_MainModel::table("dd_user_cards")->add(array("id", "level", "user_type", "image", "nickname", "rating", "description", "role","status"))->send();}
+    	$result1=_MainModel::table("dd_user_cards")->add(array("id", "level", "user_type", "image", "nickname", "rating", "description", "role","status"))->send();
+    _MainModel::viewJSON($result1);}
 
 
-    public function editCardsUser(){
+    /*public function editCardsUser(){
     	$result1=_MainModel::table("dd_user_cards")->edit(array("id"=>"3", "level"=>"1", "user_type"=>"volunter", "image"=>"null", "nickname"=>"sokolov", "rating"=>"6", "description"=>"ghjvhyinj", "role"=>"user", "status"=>"active"))->send();
 
-    	_MainModel::viewJSON($result1); }
+    	_MainModel::viewJSON($result1); }*/
 }
 ?>
