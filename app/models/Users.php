@@ -28,7 +28,7 @@ class Users {
     	$status = $_GET ['h'];
 
     	$result1=_MainModel::table("dd_user_cards")->add(array($id=>"5", $level=>"3", $user_type=>"volunter", $image=
-    		>"null", $nickname=>"dmitriev", $rating=>"5", $description=>"dfghj", $role=>"user", $status=>"active"))=>send();
+    		>"null", $nickname=>"dmitriev", $rating=>"5", $description=>"dfghj", $role=>"user", $status=>"active"))send();
 
     _MainModel::viewJSON($result1);}
 
