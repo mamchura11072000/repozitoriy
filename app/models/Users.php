@@ -17,11 +17,10 @@ class Users {
     
 
     public function addCardsUser(){
-    
+   		$id = _MainModel::table("dd_user_cards")->add(array( "level" => "3", "user_type" => "volunter", "image" => "null", "nickname" => "dmitriev", "rating" => "5", "description" => "dfghj", "role" => "user", "status" => "active"))->send();
 
-    	$result1=_MainModel::table("dd_user_cards")->add(array("id"=>"6", "level"=>"3", "user_type"=>"volunter", "image"=> 		"null", "nickname"=>"dmitriev", "rating"=>"5", "description"=>"dfghj", "role"=>"user", "status"=>"active"))->send();
-
-    _MainModel::viewJSON($result1);}
+    	_MainModel::viewJSON($id);
+	}
 
 
     /*public function editCardsUser(){
