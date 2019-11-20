@@ -4,7 +4,8 @@ class Users {
 
 
     public function getListUsers(){
-        $result = _MainModel::table("users_cards")->get()->send();}
+        $result = _MainModel::table("users_cards")->get()->send();
+    _MainModel::viewJSON($result);   }
 
     public function MyMetod(){
     	$a = $_GET ['a'];

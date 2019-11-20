@@ -11,7 +11,10 @@ class Testpresenter extends MainPresenter {
 
 public function MyMetod(){echo (new Users())->MyMetod();}
 
-//public function getListUsers(){ echo (new Users())->getListUsers();}
+public function getListUsers(){ echo (new Users())->getListUsers();
+
+}
+
 public function addCardsUser(){echo (new Users())->addCardsUser();}
 
 	/* labels */
