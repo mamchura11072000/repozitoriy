@@ -7,16 +7,17 @@ class Users {
         $result = _MainModel::table("users_cards")->get()->send();}
 
     public function MyMetod(){
-    	a=5;
-    	b=3;
-    	c=4;
     	$a = $_GET ['a'];
     	$b = $_GET ['b'];
     	$c = $_GET ['c'];
     	$summa = $a + $b + $c;
     	echo "Сумма $a + $b + $c = $summa";}
-
-         // _MainModel::$string;   
+         
     }
+
+    public function addCardsUser(){
+    	$result1=_MainModel::table("dd_user_cards")->add(array("id" => 1, "level" => 1, "user_type"=>'volunter', "image"=>'null', "nickname"=>'mamchura', "raiting"=>5, "description"=> 'ghlbj', "role"=>'admin', "status"=>'active'))->send();
+
+    	_MainModel::viewJSON($result1); }
 
 ?>
