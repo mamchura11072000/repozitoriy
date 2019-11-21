@@ -28,16 +28,9 @@ class Users {
 
     	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();
 
-    	if(empty($_GET['level'])){echo ($_GET['level']); }else{echo 'Ошибка level';};
-    	if(empty($_GET['user_type'])){echo ($_GET['user_type']);}else{echo 'Ошибка user_type';};
-    	if(empty($_GET['image'])){echo ($_GET['image']); }else{echo 'Ошибка image ';};
-    	if(empty($_GET['nickname'])){echo ($_GET['nickname']); }else{echo 'Ошибка nickname';};
-    	if(empty($_GET['rating'])){echo ($_GET['rating']); }else{echo 'Ошибка rating';};
-    	if(empty($_GET['description'])){echo ($_GET['description']); }else{echo 'Ошибка description';};
-    	if(empty($_GET['role'])){echo ($_GET['role']); }else{echo 'Ошибка role';};
-    	if(empty($_GET['status'])){echo ($_GET['status']); }else{echo 'Ошибка status';};
-    	_MainModel::viewJSON($id);
-	}
+    	 if(isset($_GET['level'])){echo 'Leve задан'; else echo 'Level не задано';
+    	 echo isset($name) ? 'Leve задано' : 'Leve не задано'
+    	 }
 
 
     /*public function editCardsUser(){
