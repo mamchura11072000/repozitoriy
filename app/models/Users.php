@@ -17,14 +17,14 @@ class Users {
     
 
     public function addCardsUser(){
-       	$b=_MainModel::$_GET['level'];
-    	$c=_MainModel::$_GET['user_type'];
-    	$d=_MainModel::$_GET['image'];
-    	$e=_MainModel::$_GET['nickname'];
-    	$f=_MainModel::$_GET['rating'];
-    	$g=_MainModel::$_GET['description'];
-    	$h=_MainModel::$_GET['role'];
-    	$j=_MainModel::$_GET['status'];
+       	$b=$_GET['level'];
+    	$c=$_GET['user_type'];
+    	$d=$_GET['image'];
+    	$e=$_GET['nickname'];
+    	$f=$_GET['rating'];
+    	$g=$_GET['description'];
+    	$h=$_GET['role'];
+    	$j=$_GET['status'];
 
     	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();
 
@@ -37,8 +37,8 @@ class Users {
     	 if(isset($_GET['role'])){echo 'role задан';} else {echo 'role не задано';};
     	 if(isset($_GET['status'])){echo 'status задан';} else {echo 'status не задано';};
 
-    	 	_MainModel::viewJSON($id);
-    	 	_MainModel::viewJSON($b, $c, $d, $e, $f, $g, $h, $j);
+    	 	_MainModel::viewJSON($id, $b, $c, $d, $e, $f, $g, $h, $j);
+    	 	
     	 }
 
 
