@@ -17,8 +17,16 @@ class Users {
     
 
     public function addCardsUser(){
-    	
-    	$id = _MainModel::table("dd_user_cards")->add(array(  "level" => "3", "user_type" => "volunter", "image" => "null", "nickname" => "dmitriev", "rating" => "5", "description" => "dfghj", "role" => "user", "status" => "active"))->send();
+       	$b=$_GET['level'];
+    	$c=$_GET['user_type'];
+    	$d=$_GET['image'];
+    	$e=$_GET['nickname'];
+    	$f=$_GET['rating'];
+    	$g=$_GET['description'];
+    	$h=$_GET['role'];
+    	$j=$_GET['status'];
+
+    	$id = _MainModel::table("dd_user_cards")->add(array("level" => $b, "user_type" => $c, "image" => $d, "nickname" => $e, "rating" => $f, "description" => $g, "role" => $h, "status" => $j))->send();
     	if(empty("level")){echo "level"; }else{echo 'Ошибка level';};
     	if(empty("user_typ")){echo "user_type";}else{echo 'Ошибка user_type';};
     	if(empty("image")){echo "image"; }else{echo 'Ошибка image ';};
