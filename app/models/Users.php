@@ -18,8 +18,7 @@ class Users {
 
     public function addCardsUser(){
     	
-    	$id = _MainModel::table("dd_user_cards")->add(array( 'id'=>7, "level" => "3", "user_type" => "volunter", "image" => "null", "nickname" => "dmitriev", "rating" => "5", "description" => "dfghj", "role" => "user", "status" => "active"))->send();
-    	if(empty("id")){echo "id"; }else{echo 'Ошибка';};
+    	$id = _MainModel::table("dd_user_cards")->add(array(  "level" => "3", "user_type" => "volunter", "image" => "null", "nickname" => "dmitriev", "rating" => "5", "description" => "dfghj", "role" => "user", "status" => "active"))->send();
     	if(empty("level")){echo "level"; }else{echo 'Ошибка';};
     	if(empty("user_typ")){echo "user_type";}else{echo 'Ошибка';};
     	if(empty("image")){echo "image"; }else{echo 'Ошибка';};
