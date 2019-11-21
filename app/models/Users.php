@@ -19,15 +19,15 @@ class Users {
     public function addCardsUser(){
     	
     	$id = _MainModel::table("dd_user_cards")->add(array( 'id'=>"7", "level" => "3", "user_type" => "volunter", "image" => "null", "nickname" => "dmitriev", "rating" => "5", "description" => "dfghj", "role" => "user", "status" => "active"))->send();
-    	if(isset("id")&&!empty("id")){echo "id"; }else{echo 'Ошибка';};
-    	if(isset("level")&&!empty("level")){echo "level"; }else{echo 'Ошибка';};
-    	if(isset("user_type")&&!empty("user_typ")){echo "user_type";}else{echo 'Ошибка';};
-    	if(isset("image")&&!empty("image")){echo "image"; }else{echo 'Ошибка';};
-    	if(isset("nickname")&&!empty("nickname")){echo "nickname"; }else{echo 'Ошибка';};
-    	if(isset("rating")&&!empty("rating")){echo "rating"; }else{echo 'Ошибка';};
-    	if(isset("description")&&!empty("description")){echo "description"; }else{echo 'Ошибка';};
-    	if(isset("role")&&!empty("role")){echo "role"; }else{echo 'Ошибка';};
-    	if(isset("status")&&!empty("status")){echo "status"; }else{echo 'Ошибка';};
+    	if(empty("id")){echo "id"; }else{echo 'Ошибка';};
+    	if(empty("level")){echo "level"; }else{echo 'Ошибка';};
+    	if(empty("user_typ")){echo "user_type";}else{echo 'Ошибка';};
+    	if(empty("image")){echo "image"; }else{echo 'Ошибка';};
+    	if(empty("nickname")){echo "nickname"; }else{echo 'Ошибка';};
+    	if(empty("rating")){echo "rating"; }else{echo 'Ошибка';};
+    	if(empty("description")){echo "description"; }else{echo 'Ошибка';};
+    	if(empty("role")){echo "role"; }else{echo 'Ошибка';};
+    	if(empty("status")){echo "status"; }else{echo 'Ошибка';};
     	_MainModel::viewJSON($id);
 	}
 
