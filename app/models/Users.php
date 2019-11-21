@@ -28,16 +28,17 @@ class Users {
 
     	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();
 
-    	 if(isset($_GET['level'])){echo 'Leve задан';} else {echo 'Level не задано';};
-    	 if(isset($_GET['user_type'])){echo 'user_type задан';} else {echo 'user_type не задано';};
-    	 if(isset($_GET['image'])){echo 'image задан';} else {echo 'image не задано';};
-    	 if(isset($_GET['nickname'])){echo 'nickname задан';} else {echo 'nickname не задано';};
-    	 if(isset($_GET['rating'])){echo 'rating задан';} else {echo 'rating не задано';};
-    	 if(isset($_GET['description'])){echo 'description задан';} else {echo 'description не задано';};
-    	 if(isset($_GET['role'])){echo 'role задан';} else {echo 'role не задано';};
-    	 if(isset($_GET['status'])){echo 'status задан';} else {echo 'status не задано';};
-
-    	 	_MainModel::viewJSON($id, $b, $c, $d, $e, $f, $g, $h, $j);
+    	
+    	 echo empty($_GET['level']) ? 'пустая' : 'не пустая', '<br>'; 
+    	 echo empty($_GET['user_type']) ? 'пустая' : 'не пустая', '<br>'; 
+    	 echo empty($_GET['image']) ? 'пустая' : 'не пустая', '<br>'; 
+    	 echo empty($_GET['nickname']) ? 'пустая' : 'не пустая', '<br>'; 
+    	 echo empty($_GET['rating']) ? 'пустая' : 'не пустая', '<br>'; 
+    	 echo empty($_GET['description']) ? 'пустая' : 'не пустая', '<br>'; 
+    	 echo empty($_GET['role']) ? 'пустая' : 'не пустая', '<br>'; 
+    	 echo empty($_GET['status']) ? 'пустая' : 'не пустая', '<br>'; 
+    	
+    	 	_MainModel::viewJSON($id);
     	 	
     	 }
 
