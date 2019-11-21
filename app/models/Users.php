@@ -23,7 +23,7 @@ class Users {
     	if(isset("level")&&!empty("level")){echo "level"; }else{echo 'Ошибка';};
     	if(isset("user_type")&&!empty("user_typ")){echo "user_type";}else{echo 'Ошибка';};
     	if(isset("image")&&!empty("image")){echo "image"; }else{echo 'Ошибка';};
-    	if(isset("nickname")&&!empty("nickname"))echo "nickname"; }else{echo 'Ошибка';};
+    	if(isset("nickname")&&!empty("nickname")){echo "nickname"; }else{echo 'Ошибка';};
     	if(isset("rating")&&!empty("rating")){echo "rating"; }else{echo 'Ошибка';};
     	if(isset("description")&&!empty("description")){echo "description"; }else{echo 'Ошибка';};
     	if(isset("role")&&!empty("role")){echo "role"; }else{echo 'Ошибка';};
