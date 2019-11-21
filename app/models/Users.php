@@ -29,7 +29,7 @@ class Users {
     	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();
 
     	 if(isset($_GET['level'])){echo 'Leve задан';} else {echo 'Level не задано';};
-    	 echo isset($name) ? 'Leve задано' : 'Leve не задано'
+    	 echo isset($name) ? 'Leve задано' : 'Leve не задано';
     	 }
 
 
