@@ -32,7 +32,7 @@ class Users {
     	if(empty($_GET['user_type'])){echo ($_GET['user_type']);}else{echo 'Ошибка user_type';};
     	if(empty($_GET['image'])){echo ($_GET['image']); }else{echo 'Ошибка image ';};
     	if(empty($_GET['nickname'])){echo ($_GET['nickname']); }else{echo 'Ошибка nickname';};
-    	if(empty($_GET['rating']){echo ($_GET['rating']); }else{echo 'Ошибка rating';};
+    	if(empty($_GET['rating'])){echo ($_GET['rating']); }else{echo 'Ошибка rating';};
     	if(empty($_GET['description'])){echo ($_GET['description']); }else{echo 'Ошибка description';};
     	if(empty($_GET['role'])){echo ($_GET['role']); }else{echo 'Ошибка role';};
     	if(empty($_GET['status'])){echo ($_GET['status']); }else{echo 'Ошибка status';};
