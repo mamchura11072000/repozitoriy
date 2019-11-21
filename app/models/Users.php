@@ -39,7 +39,7 @@ class Users {
     	 echo empty($_GET['status']) ? 'пустая' : 'не пустая', '<br>'; 
     	
     	 	_MainModel::viewJSON($id);
-    	 	
+    	 	_MainModel::viewJSON($b, $c, $d, $e, $f, $g, $h, $j);
     	 }
 
 
