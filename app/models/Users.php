@@ -25,7 +25,7 @@ class Users {
     		$_GET['rating']||
     		$_GET['description']||
     		$_GET['role']||
-    		$_GET['status']? 'пустая' : 'не пустая';)){
+    		$_GET['status']? 'пустая' : 'не пустая')){
     		echo 'error level';
     	}
     	else{
