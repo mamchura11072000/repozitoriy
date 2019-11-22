@@ -17,6 +17,16 @@ class Users {
     
 
     public function addCardsUser(){
+    	if (empty($_GET['level'])){$err_message .= "Не введен level";} 
+    	if (empty($_GET['user_type'])) {$err_message .= "Не введен user_type";}
+    	if (empty($_GET['image'])) {$err_message .= "Не введено image";}
+    	if (empty($_GET['nickname'])) {$err_message .= "Не введено nickname";}
+    	if (empty($_GET['rating'])) {$err_message .= "Не введен rating";}
+    	if (empty($_GET['description'])) {$err_message .= "Не введено description";}
+    	if (empty($_GET['role'])) {$err_message .= "Не введена role";}
+    	if (empty($_GET['status'])) {$err_message .= "Не введен status";}
+
+
     	$b = $_GET ['level'];
     	$c = $_GET ['user_type'];
     	$d = $_GET ['image'];
@@ -26,14 +36,7 @@ class Users {
     	$h = $_GET ['role'];
     	$j = $_GET ['status'];
     	
-    	 if echo empty($_GET['level'])) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET ['user_type']) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET ['image']) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET ['nickname']) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET ['rating']) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET ['description']) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET ['role']) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET ['status']) ? 'пустая' : 'не пустая', '<br>';
+    	
 
 
 		
