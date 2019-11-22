@@ -21,11 +21,11 @@ class Users {
     	if (empty($_GET['level'])|| 
     		empty ($_GET['user_type'])||
     		empty($_GET['image'])||
-    		empety($_GET['nickname'])||
-    		empety($_GET['rating'])||
-    		empety($_GET['description'])||
-    		empety($_GET['role'])||
-    		empety($_GET['status'])){
+    		empty($_GET['nickname'])||
+    		empty($_GET['rating'])||
+    		empty($_GET['description'])||
+    		empty($_GET['role'])||
+    		empty($_GET['status'])){
     		
     		echo 'error level';
     	}
