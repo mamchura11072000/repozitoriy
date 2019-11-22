@@ -18,7 +18,7 @@ class Users {
 
     public function addCardsUser(){
     	
-    	if (empty($_GET['level']|| 
+    	if (empty($_GET['level']? 'пустая' : 'не пустая'|| 
     		$_GET['user_type']||
     		$_GET['image']||
     		$_GET['nickname']||
