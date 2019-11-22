@@ -17,7 +17,7 @@ class Users {
     
 
     public function addCardsUser(){
-       	$b=$_GET['level'];
+       	$b=_MainModel::($_GET['level']);
     	$c=$_GET['user_type'];
     	$d=$_GET['image'];
     	$e=$_GET['nickname'];
