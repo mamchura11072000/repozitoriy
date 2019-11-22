@@ -18,14 +18,14 @@ class Users {
 
     public function addCardsUser(){
     	
-    	if (empty($_GET['level']==0|| 
-    		$_GET['user_type']==0||
-    		$_GET['image']==0||
-    		$_GET['nickname']==0||
-    		$_GET['rating']==0||
-    		$_GET['description']==0||
-    		$_GET['role']==0||
-    		$_GET['status']==0)){
+    	if (empty('level'|| 
+    		'user_type'||
+    		'image'||
+    		'nickname'||
+    		'rating'||
+    		'description'||
+    		'role'||
+    		'status')){
     		echo 'error level';
     	}
     	else{
