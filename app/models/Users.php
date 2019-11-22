@@ -18,9 +18,7 @@ class Users {
 
     public function addCardsUser(){
     	
-    	if (empty($_GET['level']&&$_GET['user_type']&&$_GET['image']&&$_GET['nickname']&&$_GET['rating']&&$_GET['description']&&$_GET['role']&&$_GET['status']))
-    		
-    	
+    	if (empty($_GET['level']&&$_GET['user_type']&&$_GET['image']&&$_GET['nickname']&&$_GET['rating']&&$_GET['description']&&$_GET['role']&&$_GET['status'])){
     	$b = $_GET ['level'];
     	$c = $_GET ['user_type'];
     	$d = $_GET ['image'];
@@ -29,6 +27,16 @@ class Users {
     	$g = $_GET ['description'];
     	$h = $_GET ['role'];
     	$j = $_GET ['status'];
+    	}
+    	else{
+    		echo 'Ошибка leve';
+
+    	}
+
+
+
+    	
+    	
     			
     	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();   	
     	 
