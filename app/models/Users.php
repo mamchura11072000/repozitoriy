@@ -38,8 +38,8 @@ class Users {
     	 echo empty($_GET['role']) ? 'пустая' : 'не пустая', '<br>'; 
     	 echo empty($_GET['status']) ? 'пустая' : 'не пустая', '<br>'; 
     	
-    	 	_MainModel::viewJSON($id);
-    	 	_MainModel::viewJSON($b, $c, $d, $e, $f, $g, $h, $j);
+    	 	_MainModel::viewJSON($id, $b, $c, $d, $e, $f, $g, $h, $j);
+    	 	
     	 }
 
 
