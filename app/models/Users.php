@@ -19,13 +19,13 @@ class Users {
     public function addCardsUser(){
     	
     	if (empty($_GET['level']|| 
-    		'user_type'||
-    		'image'||
-    		'nickname'||
-    		'rating'||
-    		'description'||
-    		'role'||
-    		'status')){
+    		$_GET['user_type']||
+    		$_GET['image']||
+    		$_GET['nickname']||
+    		$_GET['rating']||
+    		$_GET['description']||
+    		$_GET['role']||
+    		$_GET['status']? 'пустая' : 'не пустая';)){
     		echo 'error level';
     	}
     	else{
