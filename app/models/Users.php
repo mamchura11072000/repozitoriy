@@ -18,19 +18,21 @@ class Users {
 
     public function addCardsUser(){
     	
-    	if (empty($_GET['level']|| 
-    		$_GET['user_type']||
-    		$_GET['image']||
-    		$_GET['nickname']||
-    		$_GET['rating']||
-    		$_GET['description']||
-    		$_GET['role']||
-    		$_GET['status']=" ")){
-    		die 'error level';
+    	if (empty($_GET['level'])|| 
+    		empty ($_GET['user_type'])||
+    		empty($_GET['image'])||
+    		empety($_GET['nickname'])||
+    		empety($_GET['rating'])||
+    		empety($_GET['description'])||
+    		empety($_GET['role'])||
+    		empety($_GET['status'])){
+    		
+    		echo 'error level';
     	}
     	else{
 
     	$b = $_GET ['level'];
+    	echo 'yjhv'
     	$c = $_GET ['user_type'];
     	$d = $_GET ['image'];
     	$e = $_GET ['nickname'];
@@ -44,10 +46,10 @@ class Users {
     	
     	
     			
-    	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();   	
+    	//$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();   	
     	 
     	
-    	 	_MainModel::viewJSON($id);
+    	 	//_MainModel::viewJSON($id);
     	 	
     	 }
 
