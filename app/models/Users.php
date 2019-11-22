@@ -18,7 +18,13 @@ class Users {
 
     public function addCardsUser(){
     	
-    	if (empty($_GET['level']&&$_GET['user_type']&&$_GET['image']&&$_GET['nickname']&&$_GET['rating']&&$_GET['description']&&$_GET['role']&&$_GET['status']))
+    	if (empty($_GET['level']&&$_GET['user_type']&&$_GET['image']&&$_GET['nickname']&&$_GET['rating']&&$_GET['description']&&$_GET['role']&&$_GET['status'])){
+    		echo 'numbers are entered';
+    	    echo '<br>';
+            }
+        else
+            echo 'Is needed both numbers';
+            echo '<br>';
     	
     	$b = $_GET ['level'];
     	$c = $_GET ['user_type'];
