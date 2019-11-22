@@ -18,7 +18,7 @@ class Users {
 
     public function addCardsUser(){
     	
-    	if (empty('level'|| 
+    	if (empty($_GET['level']|| 
     		'user_type'||
     		'image'||
     		'nickname'||
