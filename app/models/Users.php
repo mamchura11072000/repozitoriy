@@ -17,7 +17,7 @@ class Users {
     
 
     public function addCardsUser(){
-    	if (empty($_GET['level'])){$b=$_GET['level'];}else {$err_message .= "Не введен level";} 
+    	if (empty($_GET['level'])){$err_message .= "Не введен level";} 
     	if (empty($_GET['user_type'])) {$err_message .= "Не введен user_type";}
     	if (empty($_GET['image'])) {    $err_message .= "Не введено image";}
     	if (empty($_GET['nickname'])) {    $err_message .= "Не введено nickname";}
@@ -26,7 +26,7 @@ class Users {
     	if (empty($_GET['role'])) {    $err_message .= "Не введена role";}
     	if (empty($_GET['status'])) {    $err_message .= "Не введен status";}
 
-    	
+    	$b=$_GET['level'];
        	$c=$_GET['user_type'];
     	$d=$_GET['image'];
     	$e=$_GET['nickname'];
