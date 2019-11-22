@@ -17,7 +17,7 @@ class Users {
     
 
     public function addCardsUser(){
-    	if (empty($_GET['level'])){$err_message .= "Не введен level";} 
+    	if (empty($_GET['level']))=_MainModel::{$err_message .= "Не введен level";} 
     	if (empty($_GET['user_type'])) {$err_message .= "Не введен user_type";}
     	if (empty($_GET['image'])) {    $err_message .= "Не введено image";}
     	if (empty($_GET['nickname'])) {    $err_message .= "Не введено nickname";}
