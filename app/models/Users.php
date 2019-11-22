@@ -17,7 +17,15 @@ class Users {
     
 
     public function addCardsUser(){
-       	$b=$_GET['level'];
+       	 echo empty($_GET['level']) ? 'пустая' : 'не пустая', '<br>'; 
+    	 echo empty($_GET['user_type']) ? 'пустая' : 'не пустая', '<br>'; 
+    	 echo empty($_GET['image']) ? 'пустая' : 'не пустая', '<br>'; 
+    	 echo empty($_GET['nickname']) ? 'пустая' : 'не пустая', '<br>'; 
+    	 echo empty($_GET['rating']) ? 'пустая' : 'не пустая', '<br>'; 
+    	 echo empty($_GET['description']) ? 'пустая' : 'не пустая', '<br>'; 
+    	 echo empty($_GET['role']) ? 'пустая' : 'не пустая', '<br>'; 
+    	 echo empty($_GET['status']) ? 'пустая' : 'не пустая', '<br>'; $b=$_GET['level'];
+    	 
     	$c=$_GET['user_type'];
     	$d=$_GET['image'];
     	$e=$_GET['nickname'];
@@ -29,14 +37,7 @@ class Users {
     	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();
 
     	
-    	 echo empty($_GET['level']) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET['user_type']) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET['image']) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET['nickname']) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET['rating']) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET['description']) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET['role']) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET['status']) ? 'пустая' : 'не пустая', '<br>'; 
+    	 
     	
     	 	_MainModel::viewJSON($id, $b, $c, $d, $e, $f, $g, $h, $j);
     	 	
