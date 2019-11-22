@@ -26,16 +26,15 @@ class Users {
     	$h=$_GET['role'];
     	$j=$_GET['status'];
 
-    	 echo empty($_GET['level']) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET['user_type']) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET['image']) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET['nickname']) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET['rating']) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET['description']) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET['role']) ? 'пустая' : 'не пустая', '<br>'; 
-    	 echo empty($_GET['status']) ? 'пустая' : 'не пустая', '<br>'; $b=$_GET['level'];
-
-    	
+    	if (empty($_GET['level'])) {$err_message .= "Не введен level";} 
+    	if (empty($_GET['user_type'])) {$err_message .= "Не введен user_type";}
+    	if (empty($_GET['image'])) {    $err_message .= "Не введена image";}
+    	if (empty($_GET['nickname'])) {    $err_message .= "Не введена nickname";}
+    	if (empty($_GET['rating'])) {    $err_message .= "Не введена rating";}
+    	if (empty($_GET['description'])) {    $err_message .= "Не введена description";}
+    	if (empty($_GET['role'])) {    $err_message .= "Не введена role";}
+    	if (empty($_GET['status'])) {    $err_message .= "Не введена status";}
+    		
 
     	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();
 
