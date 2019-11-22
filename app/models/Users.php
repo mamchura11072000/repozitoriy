@@ -17,23 +17,15 @@ class Users {
     
 
     public function addCardsUser(){
-    	if (empty($_GET['level'])){$err_message .= "Не введен level";} 
-    	if (empty($_GET['user_type'])) {$err_message .= "Не введен user_type";}
-    	if (empty($_GET['image'])) {    $err_message .= "Не введено image";}
-    	if (empty($_GET['nickname'])) {    $err_message .= "Не введено nickname";}
-    	if (empty($_GET['rating'])) {    $err_message .= "Не введен rating";}
-    	if (empty($_GET['description'])) {    $err_message .= "Не введено description";}
-    	if (empty($_GET['role'])) {    $err_message .= "Не введена role";}
-    	if (empty($_GET['status'])) {    $err_message .= "Не введен status";}
-
-    	$b=$_GET['level'];
-       	$c=$_GET['user_type'];
-    	$d=$_GET['image'];
-    	$e=$_GET['nickname'];
-    	$f=$_GET['rating'];
-    	$g=$_GET['description'];
-    	$h=$_GET['role'];
-    	$j=$_GET['status'];
+    	$b=isset($_GET['level']);
+       	$c=isset($_GET['user_type']);
+    	$d=isset($_GET['image']);
+    	$e=isset($_GET['nickname']);
+    	$f=isset($_GET['rating']);
+    	$g=isset($_GET['description']);
+    	$h=isset($_GET['role']);
+    	$j=isset($_GET['status']);
+    	if($b!="" && $c!="" && $d!="" && $e!="" && $f!="" && $g!="" && $h!="" && $j!=""){}
 
 		
     	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();   	
@@ -42,7 +34,6 @@ class Users {
     	 	_MainModel::viewJSON($id, $err_message);
     	 	
     	 }
-
 
     /*public function editCardsUser(){
     	$result1=_MainModel::table("dd_user_cards")->edit(array("id"=>"3", "level"=>"1", "user_type"=>"volunter", "image"=>"null", "nickname"=>"sokolov", "rating"=>"6", "description"=>"ghjvhyinj", "role"=>"user", "status"=>"active"))->send();
