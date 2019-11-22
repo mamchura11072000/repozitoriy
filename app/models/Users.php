@@ -32,7 +32,7 @@ class Users {
     	else{
 
     	$b = $_GET ['level'];
-    	echo 'yjhv';
+    	echo 'norm';
     	$c = $_GET ['user_type'];
     	$d = $_GET ['image'];
     	$e = $_GET ['nickname'];
