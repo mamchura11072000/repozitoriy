@@ -36,12 +36,10 @@ class Users {
     	if (empty($_GET['status'])) {    $err_message .= "Не введена status";}
     		
 
-    	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();
-
-    	
+    	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();   	
     	 
     	
-    	 	_MainModel::viewJSON($id, $b, $c, $d, $e, $f, $g, $h, $j);
+    	 	_MainModel::viewJSON($id, $_GET['level'], $c, $d, $e, $f, $g, $h, $j);
     	 	
     	 }
 
