@@ -25,8 +25,8 @@ class Users {
     	$g=$_GET['description'];
     	$h=$_GET['role'];
     	$j=$_GET['status'];
-    	
-    	 echo empty($_GET['level']) ? 'пустая' : 'не пустая', '<br>'}; 
+
+    	 echo empty($_GET['level']) ? 'пустая' : 'не пустая', '<br>'; 
     	 echo empty($_GET['user_type']) ? 'пустая' : 'не пустая', '<br>'; 
     	 echo empty($_GET['image']) ? 'пустая' : 'не пустая', '<br>'; 
     	 echo empty($_GET['nickname']) ? 'пустая' : 'не пустая', '<br>'; 
