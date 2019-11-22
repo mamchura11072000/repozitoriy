@@ -17,15 +17,16 @@ class Users {
     
 
     public function addCardsUser(){
-    	if (empty($_GET['level'])) {$err_message .= "Не введен level";} 
+    	if (empty($_GET['level'])){$b=$_GET['level'];}else {$err_message .= "Не введен level";} 
     	if (empty($_GET['user_type'])) {$err_message .= "Не введен user_type";}
-    	if (empty($_GET['image'])) {    $err_message .= "Не введена image";}
-    	if (empty($_GET['nickname'])) {    $err_message .= "Не введена nickname";}
-    	if (empty($_GET['rating'])) {    $err_message .= "Не введена rating";}
-    	if (empty($_GET['description'])) {    $err_message .= "Не введена description";}
+    	if (empty($_GET['image'])) {    $err_message .= "Не введено image";}
+    	if (empty($_GET['nickname'])) {    $err_message .= "Не введено nickname";}
+    	if (empty($_GET['rating'])) {    $err_message .= "Не введен rating";}
+    	if (empty($_GET['description'])) {    $err_message .= "Не введено description";}
     	if (empty($_GET['role'])) {    $err_message .= "Не введена role";}
-    	if (empty($_GET['status'])) {    $err_message .= "Не введена status";}
-    	$b=$_GET['level'];
+    	if (empty($_GET['status'])) {    $err_message .= "Не введен status";}
+
+    	
        	$c=$_GET['user_type'];
     	$d=$_GET['image'];
     	$e=$_GET['nickname'];
