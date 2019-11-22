@@ -17,14 +17,7 @@ class Users {
     
 
     public function addCardsUser(){
-    	if (empty($_GET['level'])){$err_message .="Не введен level";} 
-    	if (empty($_GET['user_type'])) {$err_message .= "Не введен user_type";}
-    	if (empty($_GET['image'])) {$err_message .= "Не введено image";}
-    	if (empty($_GET['nickname'])) {$err_message .= "Не введено nickname";}
-    	if (empty($_GET['rating'])) {$err_message .= "Не введен rating";}
-    	if (empty($_GET['description'])) {$err_message .= "Не введено description";}
-    	if (empty($_GET['role'])) {$err_message .= "Не введена role";}
-    	if (empty($_GET['status'])) {$err_message .= "Не введен status";}
+    	
 
 
     	$b = $_GET ['level'];
@@ -42,7 +35,14 @@ class Users {
 		
     	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();   	
     	 
-    	
+    	if (empty($_GET['level'])){$err_message .="Не введен level";} 
+    	if (empty($_GET['user_type'])) {$err_message .= "Не введен user_type";}
+    	if (empty($_GET['image'])) {$err_message .= "Не введено image";}
+    	if (empty($_GET['nickname'])) {$err_message .= "Не введено nickname";}
+    	if (empty($_GET['rating'])) {$err_message .= "Не введен rating";}
+    	if (empty($_GET['description'])) {$err_message .= "Не введено description";}
+    	if (empty($_GET['role'])) {$err_message .= "Не введена role";}
+    	if (empty($_GET['status'])) {$err_message .= "Не введен status";}
     	 	_MainModel::viewJSON($id, $err_message);
     	 	
     	 }
