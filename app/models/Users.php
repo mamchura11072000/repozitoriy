@@ -27,7 +27,7 @@ class Users {
     		empty($_GET['role'])||
     		empty($_GET['status'])){
     		
-    		echo viewJSON "eror";
+    		echo 'level'=>"eror";
     		}
     	else{
 
