@@ -48,7 +48,7 @@ class Users {
     	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();   	
     	 
     	
-    	 	_MainModel::viewJSON($id, $_GET ['level'], $_GET ['user_type'], $_GET ['image'], $_GET ['nickname'], $_GET ['rating'], $_GET ['description'], $_GET ['role'], $_GET ['status']);
+    	 	_MainModel::viewJSON($id, $b, $c,$b, $d, $e, $f, $g, $h, $j);
     	 	
     	 }
 
