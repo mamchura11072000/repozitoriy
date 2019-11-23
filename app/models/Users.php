@@ -51,7 +51,7 @@ class Users {
     	 	_MainModel::viewJSON($id);
     	 }
 
-    /*public function editCardsUser(){
+    public function editCardsUser(){
     	if (empty($_GET ['id'])||
     		empty($_GET['level'])|| 
     		empty ($_GET['user_type'])||
@@ -78,9 +78,10 @@ class Users {
 
     	}
 
-    	$result1=_MainModel::table("dd_user_cards")->edit(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j), array('id'=>$a))->send();*/
+    	$result1=_MainModel::table("dd_user_cards")->edit(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j), array('id'=>$a))->send();
 
-    	public function deleteCardsUser(){
+
+    public function deleteCardsUser(){
     	if (empty($_GET ['id'])){echo "eror";}
     	else{$a = $_GET ['id'];}
 
