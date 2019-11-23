@@ -27,7 +27,7 @@ class Users {
     		empty($_GET['role'])||
     		empty($_GET['status'])){
     		
-    		echo "eror";
+    		echo viewJSON "eror";
     		}
     	else{
 
@@ -48,7 +48,7 @@ class Users {
     	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();   	
     	 
     	
-    	 	_MainModel::viewJSON($id, $b, $c,$b, $d, $e, $f, $g, $h, $j);
+    	 	_MainModel::viewJSON($id);
     	 	
     	 }
 
