@@ -26,20 +26,12 @@ class Users {
     		empty($_GET['description'])||
     		empty($_GET['role'])||
     		empty($_GET['status'])){
+    		echo "eror"='level';
     		
-    		echo ($_GET['level'])='error';
-    		echo ($_GET['user_type'])='error';
-    		echo ($_GET['image'])='error';
-    		echo ($_GET['nickname'])='error';
-    		echo ($_GET['rating'])='error';
-    		echo ($_GET['description'])='error';
-    		echo ($_GET['role'])='error';
-    		echo ($_GET['status'])='error';
-    	}
+    		}
     	else{
 
     	$b = $_GET ['level'];
-    	echo 'norm';
     	$c = $_GET ['user_type'];
     	$d = $_GET ['image'];
     	$e = $_GET ['nickname'];
