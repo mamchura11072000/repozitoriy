@@ -27,7 +27,7 @@ class Users {
     		empty($_GET['role'])||
     		empty($_GET['status'])){
     		
-    		$eror=_MainModel::(echo "eror");
+    		$eror=_MainModel::echo ("eror");
     		}
     	else{
 
