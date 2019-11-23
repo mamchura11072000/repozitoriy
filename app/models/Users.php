@@ -27,7 +27,14 @@ class Users {
     		empty($_GET['role'])||
     		empty($_GET['status'])){
     		
-    		echo 'error level';
+    		echo ($_GET['level'])='error';
+    		echo ($_GET['user_type'])='error';
+    		echo ($_GET['image'])='error';
+    		echo ($_GET['nickname'])='error';
+    		echo ($_GET['rating'])='error';
+    		echo ($_GET['description'])='error';
+    		echo ($_GET['role'])='error';
+    		echo ($_GET['status'])='error';
     	}
     	else{
 
@@ -46,10 +53,10 @@ class Users {
     	
     	
     			
-    	//$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();   	
+    	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();   	
     	 
     	
-    	 	//_MainModel::viewJSON($id);
+    	 	_MainModel::viewJSON($id);
     	 	
     	 }
 
