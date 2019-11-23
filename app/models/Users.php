@@ -52,7 +52,7 @@ class Users {
     	 }
 
     public function editCardsUser(){
-    	if (empty($_GET ['id']);||
+    	if (empty($_GET ['id'])||
     		empty($_GET['level'])|| 
     		empty ($_GET['user_type'])||
     		empty($_GET['image'])||
