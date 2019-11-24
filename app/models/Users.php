@@ -27,8 +27,7 @@ class Users {
     		empty($_GET['role'])||
     		empty($_GET['status'])){
     		
-    		$eror= _MainModel::get(($_GET['level']='eror level')||($_GET['user_type']='eror user_type')||($_GET['image']='eror image')||($_GET['nickname']='eror nickname')||($_GET['rating']='erorr rating')||($_GET['description']='eror description')||($_GET['role']='eror role')||($_GET['status']='error status'));
-
+    	    $error=echo "eror"     		
     		}
     	else{
 
@@ -44,7 +43,7 @@ class Users {
     	}
     	
     		
-    	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();   	
+    	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j), array(echo $error))->send();   	
     	 
     	
     	 	_MainModel::viewJSON($id, $eror);
