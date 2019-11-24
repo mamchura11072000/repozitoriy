@@ -1,9 +1,9 @@
 <?php
  
 class Users {
+   
 
-
- /*   public function getListUsers(){
+    public function getListUsers(){
         $result = _MainModel::table("users_cards")->get()->send();
     _MainModel::viewJSON($result);   }
 //---------------------------------------------------------------------------------------------------------------------
@@ -15,7 +15,6 @@ class Users {
     	echo "Сумма $a + $b + $c = $summa";}
          
 //---------------------------------------------------------------------------------------------------------------------    
-
     public function addCardsUser(){
     	
     	if (empty($_GET['level'])|| 
@@ -79,7 +78,7 @@ class Users {
     	}
 
     	$result1=_MainModel::table("dd_user_cards")->edit(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j), array('id'=>$a))->send();
-    }*/
+    }
 
 //---------------------------------------------------------------------------------------------------------------------
     
