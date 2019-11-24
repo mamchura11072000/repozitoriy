@@ -6,7 +6,7 @@ class Users {
     public function getListUsers(){
         $result = _MainModel::table("users_cards")->get()->send();
     _MainModel::viewJSON($result);   }
-
+//---------------------------------------------------------------------------------------------------------------------
     public function MyMetod(){
     	$a = $_GET ['a'];
     	$b = $_GET ['b'];
@@ -14,7 +14,7 @@ class Users {
     	$summa = $a + $b + $c;
     	echo "Сумма $a + $b + $c = $summa";}
          
-    
+//---------------------------------------------------------------------------------------------------------------------    
 
     public function addCardsUser(){
     	
@@ -27,7 +27,7 @@ class Users {
     		empty($_GET['role'])||
     		empty($_GET['status'])){
     		
-    	    echo "eror";     		
+    	    echo "Введены не все значения";     		
     		}
     	else{
 
@@ -46,9 +46,11 @@ class Users {
     	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();   	
     	 
     	
-    	 	_MainModel::viewJSON($id, "eror");
+    	 	_MainModel::viewJSON($id);
     	 }
 
+//---------------------------------------------------------------------------------------------------------------------
+    
     public function editCardsUser(){
     	if (empty($_GET ['id'])||
     		empty($_GET['level'])|| 
@@ -79,12 +81,13 @@ class Users {
     	$result1=_MainModel::table("dd_user_cards")->edit(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j), array('id'=>$a))->send();
     }
 
-
+//---------------------------------------------------------------------------------------------------------------------
+    
     public function deleteCardsUser(){
     	if (empty($_GET ['id'])){echo "eror";}
     	else{$a = $_GET ['id'];}
 
-        $result = _MainModel::table("dd_user_cards")->delete(array('id'=>$a))->send();
+        $result = _MainModel::table("dd_user_cards")->delete('id'=>$a)->send();
         _MainModel::viewJSON($result);
         }
     	 
