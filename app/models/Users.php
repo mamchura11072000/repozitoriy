@@ -83,10 +83,10 @@ class Users {
 //---------------------------------------------------------------------------------------------------------------------
     
     public function deleteCardsUser(){
-    	if (empty($_GET ["id"])){echo "eror";}
-    	else{$a = $_GET ["id"];}
+    	if (empty($_GET ['id'])){echo "eror";}
+    	else{$a = $_GET ['id'];}
 
-        $result = _MainModel::table("dd_user_cards")->delete(array("id"=>$a))->send();
+        $result = _MainModel::table("dd_user_cards")->delete(array('id'=> $a))->send();;
         _MainModel::viewJSON($result);
         }
     	 
