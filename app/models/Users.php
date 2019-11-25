@@ -46,7 +46,7 @@ class Users {
     	 
     	
     	 	_MainModel::viewJSON($id);
-    	 	_MainModel::viewJSON(["level" => "errro_level"]);
+    	 	_MainModel::viewJSON([$b => "errro_level"]);
     	 }
 
 //---------------------------------------------------------------------------------------------------------------------
