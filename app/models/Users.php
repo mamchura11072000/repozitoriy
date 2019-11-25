@@ -36,11 +36,10 @@ class Users {
     	     	 _MainModel::viewJSON($id);
     	}
     	
-    	   		
-    	
-    	 	    	 	
+    		
+     	 	
 
-    	 }
+   }
 
 //---------------------------------------------------------------------------------------------------------------------
     
@@ -55,7 +54,7 @@ class Users {
     		empty($_GET['role'])||
     		empty($_GET['status'])){
     		
-    		echo "error";
+    		 _MainModel::viewJSON(["error"=>"errror"]); 
     		}
     	else{
 
@@ -69,10 +68,11 @@ class Users {
     	$h = $_GET ['role'];
     	$j = $_GET ['status'];
 
+        $result1=_MainModel::table("dd_user_cards")->edit(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j), array('id'=>$a))->send();
+            }
     	}
 
-    	$result1=_MainModel::table("dd_user_cards")->edit(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j), array('id'=>$a))->send();
-    }
+    	
 
 //---------------------------------------------------------------------------------------------------------------------
     
