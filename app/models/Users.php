@@ -104,7 +104,7 @@ class Users {
     		empty($_GET['gender'])||
     		empty($_GET['other_data']))	{
 
-    		_MainModel::viewJSON("error"=>"errrror")
+    		_MainModel::viewJSON(["error"=>"errrror"]);
     	    	      		
     		}
     	else{
