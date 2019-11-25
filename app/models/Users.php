@@ -19,7 +19,7 @@ class Users {
     	
     	if (empty($_GET['level'])||empty ($_GET['user_type'])||empty($_GET['image'])||empty($_GET['nickname'])||	empty($_GET['rating'])||empty($_GET['description'])||empty($_GET['role'])||	empty($_GET['status'])){
          
-       $error= _MainModel::viewJSON(["error"=>"errror"]);    		
+       $error = _MainModel::viewJSON(["error"=>"errror"]);    		
     		}
     		
     	else{
