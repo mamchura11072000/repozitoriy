@@ -23,20 +23,21 @@ class Users {
     		$c = $_GET ['user_type'];
     		$d = $_GET ['image'];
     		$e = $_GET ['nickname'];
-    	$f = $_GET ['rating'];
-    	$g = $_GET ['description'];
-    	$h = $_GET ['role'];
-    	$j = $_GET ['status'];
+    	    $f = $_GET ['rating'];
+    		$g = $_GET ['description'];
+    		$h = $_GET ['role'];
+    		$j = $_GET ['status'];
 
     	    }
     	else{
-    	echo "error";
+    	
     	}
     	
     		
     	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();   	
     	     	
-    	 	_MainModel::viewJSON($id, ["error"=>"eror_level"]);    	 	
+    	 	_MainModel::viewJSON($id['level'=>"eror_level"]);
+    	 	_MainModel::viewJSON(['level'=>"eror_level"]);    	 	
 
     	 }
 
