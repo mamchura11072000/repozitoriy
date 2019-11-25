@@ -122,13 +122,13 @@ class Users {
 //--------------------------------------------------------------------------------------------------------------------
 
    	public function editUserPersonData(){
-    	if (empty($_GET['password'])||empty ($_GET['phone'])||empty($_GET['phone_token'])||empty($_GET['phone_token_data'])||empty($_GET['doc_photo'])||empty($_GET['surname'])||empty($_GET['name'])||empty($_GET['patronymic'])||empty($_GET['timestamp'])||empty($_GET['data_of_brith'])||empty($_GET['address'])||empty($_GET['coordinates'])||empty($_GET['gender'])||empty($_GET['other_data'])){
+    	if (empty($_GET['id'])||empty($_GET['password'])||empty ($_GET['phone'])||empty($_GET['phone_token'])||empty($_GET['phone_token_data'])||empty($_GET['doc_photo'])||empty($_GET['surname'])||empty($_GET['name'])||empty($_GET['patronymic'])||empty($_GET['timestamp'])||empty($_GET['data_of_brith'])||empty($_GET['address'])||empty($_GET['coordinates'])||empty($_GET['gender'])||empty($_GET['other_data'])){
     		
     		 _MainModel::viewJSON(["error"=>"errror"]); 
     		}
     	else{
 
-    		$b = $_GET ['password'];
+    		$a = $_GET ['id'];$b = $_GET ['password'];
     		$c = $_GET ['phone'];
     		$d = $_GET ['phone_token'];
     		$e = $_GET ['phone_token_data'];
