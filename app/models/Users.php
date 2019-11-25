@@ -2,7 +2,7 @@
  
 class Users {
    
-/*
+
     public function getListUsers(){
         $result = _MainModel::table("users_cards")->get()->send();
     _MainModel::viewJSON($result);   }
@@ -70,17 +70,22 @@ class Users {
 
         $result1=_MainModel::table("dd_user_cards")->edit(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j), array('id'=>$a))->send();
             }
-    	}*/
-
-//---------------------------------------------------------------------------------------------------------------------
-    
-    public function deleteCardsUser(){
-    	$id = $_GET ['id'];
-    	$result = _MainModel::table("dd_user_cards")->delete(array('id' => $id))->send();
-   		
     	}
 
-//---------------------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------------
+    
+    public function deleteCardsUser(){
+    	if (empty($_GET ['id']){
+
+			_MainModel::viewJSON(["error"=>"errror"]); 
+    		}
+    	else{
+
+    		$id = $_GET ['id'];
+    		$result = _MainModel::table("dd_user_cards")->delete(array('id' => $id))->send();
+    	    }
+    	}
+//--------------------------------------------------------------------------------------------------------------------
 
     public function addUserPersonData(){
     	
