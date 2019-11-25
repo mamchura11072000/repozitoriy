@@ -101,7 +101,7 @@ class Users {
     		$j = $_GET ['patronymic'];
     		$k = $_GET ['timestamp'];
     		$l = $_GET ['data_of_brith'];
-    		$m = $_GET ['addess'];
+    		$m = $_GET ['address'];
     		$n = $_GET ['coordinates'];
     		$o = $_GET ['gender'];
     		$p = $_GET ['other_data'];
