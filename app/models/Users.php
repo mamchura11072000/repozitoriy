@@ -103,7 +103,7 @@ class Users {
     		empty($_GET['name'])||
     		empty($_GET['patronymic'])||
     		empty($_GET['timestamp'])||
-    		empty($_GET['data_of_brith'])
+    		empty($_GET['data_of_brith'])||
     		empty($_GET['adress'])||
     		empty($_GET['coordinates'])||
     		empty($_GET['gender'])||
