@@ -88,8 +88,12 @@ class Users {
 //--------------------------------------------------------------------------------------------------------------------
 
     public function addUserPersonData(){
-    	
-    
+    	if (empty($_GET['password'])||empty ($_GET['phone'])||empty($_GET['phone_token'])||empty($_GET['phone_token_data'])||empty($_GET['doc_photo'])||empty($_GET['surname'])||empty($_GET['name'])||empty($_GET['patronymic'])||empty($_GET['timestamp'])||empty($_GET['data_of_brith'])||empty($_GET['address'])||empty($_GET['coordinates'])||empty($_GET['gender'])||empty($_GET['other_data']))	{
+
+    		_MainModel::viewJSON(["error"=>"errrror"]);
+    	    	      		
+    		}
+    	else{    
 
     	 	$b = $_GET ['password'];
     		$c = $_GET ['phone'];
@@ -104,11 +108,12 @@ class Users {
     		$m = $_GET ['address'];
     		$n = $_GET ['coordinates'];
     		$o = $_GET ['gender'];
-    		$p = $_GET ['other_data'];
-    	
-    		
-    	  	 	$idPerson = _MainModel::table("dd_user_person_data")->add(array('password' => $b, 'phone' => $c, 'phone_token' => $d, 'phone_token_data' => $e, 'doc_photo' => $f, 'surname' => $g, 'name' => $h, 'patronymic' => $j, 'timestamp' => $k, 'data_of_brith' => $l, 'address' => $m, 'coordinates' => $n, 'gender' => $o, 'other_data' => $p))->send();
+    		$p = $_GET ['other_data'];	
+    		$idPerson = _MainModel::table("dd_user_person_data")->add(array('password' => $b, 'phone' => $c, 'phone_token' => $d, 'phone_token_data' => $e, 'doc_photo' => $f, 'surname' => $g, 'name' => $h, 'patronymic' => $j, 'timestamp' => $k, 'data_of_brith' => $l, 'address' => $m, 'coordinates' => $n, 'gender' => $o, 'other_data' => $p))->send();
     		   _MainModel::viewJSON($idPerson);
+    	
+    		}
+    	  	 
     	 }
 
     	 
