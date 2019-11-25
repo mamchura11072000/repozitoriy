@@ -102,25 +102,26 @@ class Users {
     		empty($_GET['coordinates'])||
     		empty($_GET['gender'])||
     		empty($_GET['other_data']))	{
-    		
-    	    echo "Введены не все значения:";     		
+
+    		$b = $_GET ['password'];
+    		$c = $_GET ['phone'];
+    		$d = $_GET ['phone_token'];
+    		$e = $_GET ['phone_token_data'];
+    		$f = $_GET ['doc_photo'];
+    		$g = $_GET ['surname'];
+    		$h = $_GET ['name'];
+    		$j = $_GET ['patronymic'];
+    		$k = $_GET ['timestamp'];
+    		$l = $_GET ['data_of_brith'];
+    		$m = $_GET ['addess'];
+    		$n = $_GET ['coordinates'];
+    		$o = $_GET ['gender'];
+    		$p = $_GET ['other_data'];
+    	    	      		
     		}
     	else{
 
-    	$b = $_GET ['password'];
-    	$c = $_GET ['phone'];
-    	$d = $_GET ['phone_token'];
-    	$e = $_GET ['phone_token_data'];
-    	$f = $_GET ['doc_photo'];
-    	$g = $_GET ['surname'];
-    	$h = $_GET ['name'];
-    	$j = $_GET ['patronymic'];
-    	$k = $_GET ['timestamp'];
-    	$l = $_GET ['data_of_brith'];
-    	$m = $_GET ['addess'];
-    	$n = $_GET ['coordinates'];
-    	$o = $_GET ['gender'];
-    	$p = $_GET ['other_data'];
+    	echo "Введены не все значения:";   
 
     	}
     	
