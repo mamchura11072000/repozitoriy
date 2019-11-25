@@ -26,8 +26,7 @@ class Users {
     		empty($_GET['role'])||
     		empty($_GET['status'])){
     		
-    	    $error=echo "error";
-    		}
+    	    }
     	else{
 
     	$b = $_GET ['level'];
