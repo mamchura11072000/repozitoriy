@@ -26,7 +26,7 @@ class Users {
     		empty($_GET['role'])||
     		empty($_GET['status'])){
     		
-    	    $error=>echo "error";
+    	    $error=echo "error";
     		}
     	else{
 
@@ -46,7 +46,7 @@ class Users {
     	 
     	
     	 	_MainModel::viewJSON($id);
-    	 	_MainModel::viewJSON(['level' => "errro_level", 'user_type' => "errro_user_type", 'image' => "errro_image", 'nickname' => "errro_nickname", 'rating' => "errro_rating", 'description' => "errro_description", 'role' => "errro_role", 'ststus' => "errro_status"]);
+    	 	_MainModel::viewJSON([$b="eror_level"]);
 
     	 }
 
