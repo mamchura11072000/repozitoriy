@@ -89,22 +89,9 @@ class Users {
 
     public function addUserPersonData(){
     	
-    	if (empty($_GET['password'])|| 
-    		empty ($_GET['phone'])||
-    		empty($_GET['phone_token'])||
-    		empty($_GET['phone_token_data'])||
-    		empty($_GET['doc_photo'])||
-    		empty($_GET['surname'])||
-    		empty($_GET['name'])||
-    		empty($_GET['patronymic'])||
-    		empty($_GET['timestamp'])||
-    		empty($_GET['data_of_brith'])||
-    		empty($_GET['address'])||
-    		empty($_GET['coordinates'])||
-    		empty($_GET['gender'])||
-    		empty($_GET['other_data']))	{
+    	if (empty($_GET['password'])||empty ($_GET['phone'])||empty($_GET['phone_token'])||empty($_GET['phone_token_data'])||empty($_GET['doc_photo'])||empty($_GET['surname'])||empty($_GET['name'])||empty($_GET['patronymic'])||empty($_GET['timestamp'])||empty($_GET['data_of_brith'])||empty($_GET['address'])||empty($_GET['coordinates'])||empty($_GET['gender'])||empty($_GET['other_data']))	{
 
-    		_MainModel::viewJSON(["error"=>"errrror"]);
+    		//_MainModel::viewJSON(["error"=>"errrror"]);
     	    	      		
     		}
     	else{
