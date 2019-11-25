@@ -109,7 +109,7 @@ class Users {
     		empty($_GET['gender'])||
     		empty($_GET['other_data']))	{
     		
-    	    $error=echo "Введены не все значения:";     		
+    	    echo "Введены не все значения:";     		
     		}
     	else{
 
