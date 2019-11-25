@@ -19,7 +19,7 @@ class Users {
     	
     	if (empty($_GET['level'])||empty ($_GET['user_type'])||empty($_GET['image'])||empty($_GET['nickname'])||	empty($_GET['rating'])||empty($_GET['description'])||empty($_GET['role'])||	empty($_GET['status'])){
 
-    		echo "error";    		
+    		_MainModel::viewJSON(["error"=>"errror"]);    		
     		}
     	else{
     	    $b = $_GET ['level'];
@@ -36,7 +36,7 @@ class Users {
     	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();   	
     	     	
     	 	_MainModel::viewJSON($id);
-    	 	_MainModel::viewJSON(["error"=>"errror"]);    	 	
+    	 	    	 	
 
     	 }
 
