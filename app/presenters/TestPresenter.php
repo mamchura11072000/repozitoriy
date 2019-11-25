@@ -19,6 +19,8 @@ public function editCardsUser(){echo (new Users())->editCardsUser();}
 
 public function deleteCardsUser(){echo (new Users())->addCardsUser();}
 
+public function addUserPersonData(){echo (new users())->addUserPersonData();}
+
 	/* labels */
 	//public function ruLableTable(){ $this->renderLabel('rus', 'labelLayoutTable'); }
 
