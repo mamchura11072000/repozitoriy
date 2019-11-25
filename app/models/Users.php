@@ -26,7 +26,7 @@ class Users {
     		empty($_GET['role'])||
     		empty($_GET['status'])){
     		
-    	    echo ($_GET['level']) => "errro_level"||'user_type' => "errro_user_type"|| 'image' => "errro_image"|| 'nickname' => "errro_nickname"|| 'rating' => "errro_rating"|| 'description' => "errro_description"|| 'role' => "errro_role"|| 'ststus' => "errro_status";
+    	    $error=>echo "error";
     		}
     	else{
 
