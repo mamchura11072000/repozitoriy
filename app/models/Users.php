@@ -26,7 +26,7 @@ class Users {
     		empty($_GET['role'])||
     		empty($_GET['status'])){
     		
-    	    $error=echo "Введены не все значения:";     		
+    	    echo "Введены не все значения:";     		
     		}
     	else{
 
