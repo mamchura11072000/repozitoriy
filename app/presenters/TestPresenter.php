@@ -23,7 +23,7 @@ public function addUserPersonData(){echo (new users())->addUserPersonData();}
 
 public function editUserPersonData(){echo (new users())->editUserPersonData();}
 
-public function deleteUserPersonData(){echo (new users())->deletePersonData();}
+public function deleteUserPersonData(){echo (new users())->deleteUserPersonData();}
 
 	/* labels */
 	//public function ruLableTable(){ $this->renderLabel('rus', 'labelLayoutTable'); }
