@@ -75,7 +75,7 @@ class Users {
 //--------------------------------------------------------------------------------------------------------------------
     
     public function deleteCardsUser(){
-    	if (empty($_GET ['id']){
+    	if (empty($_GET ['id'])){
 
 			_MainModel::viewJSON(["error"=>"errror"]); 
     		}
