@@ -77,8 +77,8 @@ class Users {
 //---------------------------------------------------------------------------------------------------------------------
     
     public function deleteCardsUser(){
-    	$a = $_GET ['id'];
-    	_MainModel::table("dd_user_cards")->delete(array("id" => 4))->send();
+    	$id = $_GET ['id'];
+    	$result = _MainModel::table("dd_user_cards")->delete(array("id" =>$id))->send();
 
     		
     	}
