@@ -36,7 +36,7 @@ class Users {
     		
     	$id = _MainModel::table("dd_user_cards")->add(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j))->send();   	
     	     	
-    	 	_MainModel::viewJSON($id['level'=>"eror_level"]);
+    	 	_MainModel::viewJSON($id);
     	 	_MainModel::viewJSON([$b=>"eror_level"]);    	 	
 
     	 }
