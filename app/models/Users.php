@@ -154,8 +154,8 @@ class Users {
     		$o = $_GET ['gender'];
     		$p = $_GET ['other_data'];	
 
-        $result1=_MainModel::table("dd_user_cards")->edit(array('password' => $b, 'phone' => $c, 'phone_token' => $d, 'phone_token_data' => $e, 'doc_photo' => $f, 'surname' => $g, 'name' => $h, 'patronymic' => $j, 'timestamp' => $k, 'data_of_brith' => $l, 'address' => $m, 'coordinates' => $n, 'gender' => $o, 'other_data' => $p), array('id'=>$a))->send();
-            }
+        
+            }$result1=_MainModel::table("dd_user_cards")->edit(array('password' => $b, 'phone' => $c, 'phone_token' => $d, 'phone_token_data' => $e, 'doc_photo' => $f, 'surname' => $g, 'name' => $h, 'patronymic' => $j, 'timestamp' => $k, 'data_of_brith' => $l, 'address' => $m, 'coordinates' => $n, 'gender' => $o, 'other_data' => $p), array('id'=>$a))->send();
     	}
 
 
