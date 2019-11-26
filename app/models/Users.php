@@ -48,12 +48,19 @@ class Users {
     	if (empty($_GET ['id'])){
     		$id = $_GET ['id'];
     		 if(empty ($_GET['level'])){$b = $_GET ['level'];}
+    		 else{$c = $_GET ['user_type'];}
     	     if(empty($_GET['user_type'])){$c = $_GET ['user_type'];}
+    	     else{$d = $_GET ['image'];}
     	     if(empty($_GET['image'])){$d = $_GET ['image'];}
+    	     else{$e = $_GET ['nickname'];}
     	     if(empty($_GET['nickname'])){$e = $_GET ['nickname'];}
+    	     else{$f = $_GET ['rating'];}
     	     if(empty($_GET['rating'])){$f = $_GET ['rating'];}
+    	     else{$g = $_GET ['description'];}
     	     if(empty($_GET['description'])){$g = $_GET ['description'];}
+    	     else{$h = $_GET ['role'];}
     	     if(empty($_GET['role'])){$h = $_GET ['role'];}
+    	     else{$j = $_GET ['status'];}
     	     if(empty($_GET['status'])){$j = $_GET ['status'];}
     	     
     	          
