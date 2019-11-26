@@ -61,7 +61,7 @@ class Users {
     		}
     	else{
     	     //_MainModel::viewJSON(["error"=>"errror"]);    	    
-    	    }$result1=_MainModel::table("dd_user_cards")->edit(array('id'=$id), array('level' =$b, 'user_type' = $c,'image' =$d, 'nickname'=$e,'rating' = $f,'description' = $g,'role' = $h,'status' = $j))->send();
+    	    }$result1=_MainModel::table("dd_user_cards")->edit(array('id'=>$id), array('level' =>$b, 'user_type' => $c,'image' =>$d, 'nickname'=>$e,'rating' => $f,'description' => $g,'role' => $h,'status' => $j))->send();
     	}
 
     	
