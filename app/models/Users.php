@@ -60,7 +60,7 @@ class Users {
     	     	'nickname'=>$e,'rating' => $f,'description' => $g,'role' => $h,'status' => $j), array('id'=>$a))->send();  
     		}
     	else{
-    	     _MainModel::viewJSON(["error"=>"errror"]);    	    
+    	     //_MainModel::viewJSON(["error"=>"errror"]);    	    
     	    }
 
     	}
