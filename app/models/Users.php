@@ -44,33 +44,22 @@ class Users {
 //---------------------------------------------------------------------------------------------------------------------
     
     public function editCardsUser(){
-    	if (empty($_GET ['id'])||
-    		empty($_GET['level'])|| 
-    		empty ($_GET['user_type'])||
-    		empty($_GET['image'])||
-    		empty($_GET['nickname'])||
-    		empty($_GET['rating'])||
-    		empty($_GET['description'])||
-    		empty($_GET['role'])||
-    		empty($_GET['status'])){
-    		
-    		 _MainModel::viewJSON(["error"=>"errror"]); 
+    	if (empty($_GET ['id']));{
+    		_MainModel::viewJSON(["error"=>"errror"]);
     		}
     	else{
-
-    	$a = $_GET ['id'];
-    	$b = $_GET ['level'];
-    	$c = $_GET ['user_type'];
-    	$d = $_GET ['image'];
-    	$e = $_GET ['nickname'];
-    	$f = $_GET ['rating'];
-    	$g = $_GET ['description'];
-    	$h = $_GET ['role'];
-    	$j = $_GET ['status'];
-
-        $result1=_MainModel::table("dd_user_cards")->edit(array('level' =>$b, 'user_type' => $c, 'image' =>$d,'nickname'=>$e,'rating' => $f,'description' => $g,'role' => $h,'status' => $j), array('id'=>$a))->send();
-            } 
-        
+    	     $a = $_GET ['id'];
+    	     if($_GET['level']){$b = $_GET ['level'];}
+    	     if($_GET['user_type']){$c = $_GET ['user_type'];}
+    	     if($_GET['image']){$d = $_GET ['image'];}
+    	     if($_GET['nickname']){$e = $_GET ['nickname'];}
+    	     if($_GET['rating']){$f = $_GET ['rating'];}
+    	     if($_GET['description']){$g = $_GET ['description'];}
+    	     if($_GET['role']){$h = $_GET ['role'];
+    	     if($_GET['status']){$j = $_GET ['status'];}
+    	     $result1=_MainModel::table("dd_user_cards")->edit(array('level' =>$b, 'user_type' => $c, 'image' =>$d,'nickname'=>$e,'rating' => $f,'description' => $g,'role' => $h,'status' => $j), array('id'=>$a))->send();
+    	    }          
+                 
     	}
 
 //--------------------------------------------------------------------------------------------------------------------
