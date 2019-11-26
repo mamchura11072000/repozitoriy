@@ -67,7 +67,7 @@ class Users {
     		}
     	else{
     		$id=$_GET['id']
-    		$b = $_GET ['level'];
+    		
     		$c = $_GET ['user_type'];
     		$d = $_GET ['image'];
     		$e = $_GET ['nickname'];
@@ -77,7 +77,7 @@ class Users {
     		$j = $_GET ['status'];
     		_MainModel::viewJSON(["error"=>"errror"]); 
     	        	    
-    	    }$result = _MainModel::table("dd_user_cards")->edit(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j), array('id'=>$id))->send();     	
+    	    }$result = _MainModel::table("dd_user_cards")->edit(array('level' => $b = $_GET ['level'];, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j), array('id'=>$id))->send();     	
     	}    	
 
 //--------------------------------------------------------------------------------------------------------------------
