@@ -171,9 +171,15 @@ class Users {
     	}
 //--------------------------------------------------------------------------------------------------------------------
     public function getCardsUsers(){
-    	$id=$_GET['id'];
-        $result = _MainModel::table("dd_user_cards")->get(array("level", "user_type", "image", "nickname", "rating", "description", "role", "status"))->filter(array('id'=>$id))->send();
-        _MainModel::viewJSON($result);   }
-    	 
+    	if (empty($_GET ['id'])){
+
+			_MainModel::viewJSON(["error"=>"errror"]); 
+    		}
+    	else{
+    		$id=$_GET['id'];
+        $result = _MainModel::table("dd_user_cards")->get(array("level", "user_type", "image", "nickname", "rating", "description", "role", "status"))->filter(array('' => , );('id'=>$id))->send();
+        _MainModel::viewJSON($result);
+    		}
+    	}
 }
 ?>
