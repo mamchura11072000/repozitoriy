@@ -46,9 +46,13 @@ class Users {
     public function editCardsUser(){
   
     	if (empty($_GET ['id'])){
-    		
+    	
+    		 _MainModel::viewJSON(["error"=>"errror"]); 
+
+    		}
+    	else{
     		$id = $_GET ['id'];
-    		 if(empty ($_GET['level'])){$b = $_GET ['level'];}
+    		if(empty ($_GET['level'])){$b = $_GET ['level'];}
     		 else{$c = $_GET ['user_type'];}
     	     if(empty($_GET['user_type'])){$c = $_GET ['user_type'];}
     	     else{$d = $_GET ['image'];}
@@ -63,11 +67,6 @@ class Users {
     	     if(empty($_GET['role'])){$h = $_GET ['role'];}
     	     else{$j = $_GET ['status'];}
     	     if(empty($_GET['status'])){$j = $_GET ['status'];}
-    	     
-
-    		}
-    	else{
-    		$id = $_GET ['id'];
     		    	     	    
     	    }  	$result = _MainModel::table("dd_user_cards")->edit(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j), array('id'=>$id))->send();   
     	          
