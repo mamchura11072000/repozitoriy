@@ -181,5 +181,17 @@ class Users {
         _MainModel::viewJSON($result);
     		}
     	}
+//--------------------------------------------------------------------------------------------------------------------
+    public function getUserPersonData(){
+    	if (empty($_GET ['id'])){
+
+			_MainModel::viewJSON(["error"=>"errror"]); 
+    		}
+    	else{
+    		$id=$_GET['id'];
+        	$result = _MainModel::table("dd_user_cards")->get(array("password","phone", "phone_token", "phone_token_data", "doc_photo", "surname", "name", "patronymic", "timestamp", "data_of_brith", "address", "coordinates", "gender", "other_data"))->filter(array('id'=>$id))->send();
+        _MainModel::viewJSON($result);
+    		}
+    	}
 }
 ?>
