@@ -113,7 +113,7 @@ class Users {
     		}
     	else{    
 
-    	 	$a = $_GET ['id'];
+    	 	
     	 	$b = $_GET ['password'];
     		$c = $_GET ['phone'];
     		$d = $_GET ['phone_token'];
@@ -146,7 +146,8 @@ class Users {
     		}
     	else{
 
-    		$a = $_GET ['id'];$b = $_GET ['password'];
+    		$a = $_GET ['id'];
+    		$b = $_GET ['password'];
     		$c = $_GET ['phone'];
     		$d = $_GET ['phone_token'];
     		$e = $_GET ['phone_token_data'];
