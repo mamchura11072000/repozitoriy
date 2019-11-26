@@ -45,11 +45,10 @@ class Users {
     
     public function editCardsUser(){
     	if (empty($_GET ['id']));{
-    		_MainModel::viewJSON(["error"=>"errror"]);
+    		$a = $_GET ['id'];
     		}
     	else{
-    	     $a = $_GET ['id'];
-    	    
+    	     _MainModel::viewJSON(["error"=>"errror"]);    	    
     	    }          
              if($_GET['level']){$b = $_GET ['level'];}
     	     if($_GET['user_type']){$c = $_GET ['user_type'];}
