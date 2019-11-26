@@ -66,9 +66,18 @@ class Users {
     	          
     		}
     	else{
-    			_MainModel::viewJSON(["error"=>"errror"]); 
+    		$id=$_GET['id'];
+    		$b = $_GET ['level'];
+    		$c = $_GET ['user_type'];
+    		$d = $_GET ['image'];
+    		$e = $_GET ['nickname'];
+    	    $f = $_GET ['rating'];
+    		$g = $_GET ['description'];
+    		$h = $_GET ['role'];
+    		$j = $_GET ['status'];
+    		_MainModel::viewJSON(["error"=>"errror"]); 
     	        	    
-    	    }$result = _MainModel::table("dd_user_cards")->edit(array('level' => $b = $_GET ['level'];, 'user_type' => $c = $_GET ['user_type'], 'image' => $d = $_GET ['image'], 'nickname' => $e = $_GET ['nickname'], 'rating' => $f = $_GET ['rating'], 'description' =>$g = $_GET ['description'], 'role' => $h = $_GET ['role'], 'status' => $j = $_GET ['status']), array('id'=>$id=$_GET['id']))->send();     	
+    	    }$result = _MainModel::table("dd_user_cards")->edit(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j), array('id'=>$id))->send();     	
     	}    	
 
 //--------------------------------------------------------------------------------------------------------------------
