@@ -55,7 +55,7 @@ class Users {
     	     if($_GET['description']){$g = $_GET ['description'];}
     	     if($_GET['role']){$h = $_GET ['role'];}
     	     if($_GET['status']){$j = $_GET ['status'];}
-    	    $result1=_MainModel::table("dd_user_cards")->edit(array('id'=>$id), array('level' =>$b, 'user_type' => $c,'image' =>$d, 'nickname'=>$e,'rating' => $f,'description' => $g,'role' => $h,'status' => $j))->send();  
+    	    $result1=_MainModel::table("dd_user_cards")->edit(array($id), array($b, $c, $d, $e, $f, $g, $h, $j))->send();  
 
     	     
     		}
