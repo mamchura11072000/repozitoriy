@@ -52,7 +52,7 @@ class Users {
     		}
     	else{
     		$id = $_GET ['id'];
-    		$massiv=[$b, $c, $d, $e, $f, $g, $h, $j];
+    		
     		if(empty ($_GET['level'])){$b = $_GET ['level'];}
     		if(empty($_GET['user_type'])){$c = $_GET ['user_type'];}
     	    if(empty($_GET['image'])){$d = $_GET ['image'];}
@@ -61,7 +61,7 @@ class Users {
     	    if(empty($_GET['description'])){$g = $_GET ['description'];}
     	    if(empty($_GET['role'])){$h = $_GET ['role'];}
     	    if(empty($_GET['status'])){$j = $_GET ['status'];}
-    	    
+    	    $massiv=[$b, $c, $d, $e, $f, $g, $h, $j];
     	    }  	$result = _MainModel::table("dd_user_cards")->edit(array($massiv), array('id'=>$id))->send();   
     	          
     	}    	
@@ -106,7 +106,6 @@ class Users {
     		}
     	else{    
 
-    	 	
     	 	$b = $_GET ['password'];
     		$c = $_GET ['phone'];
     		$d = $_GET ['phone_token'];
@@ -124,8 +123,8 @@ class Users {
 
     		
     		}
-    	  	 $idPerson = _MainModel::table("dd_user_person_data")->add(array('password' => $b, 'phone' => $c, 'phone_token' => $d, 'phone_token_data' => $e, 'doc_photo' => $f, 'surname' => $g, 'name' => $h, 'patronymic' => $j, 'timestamp' => $k, 'data_of_brith' => $l, 'address' => $m, 'coordinates' => $n, 'gender' => $o, 'other_data' => $p))->send();
-    		   _MainModel::viewJSON($idPerson);
+    	  	 $id = _MainModel::table("dd_user_person_data")->add(array('password' => $b, 'phone' => $c, 'phone_token' => $d, 'phone_token_data' => $e, 'doc_photo' => $f, 'surname' => $g, 'name' => $h, 'patronymic' => $j, 'timestamp' => $k, 'data_of_brith' => $l, 'address' => $m, 'coordinates' => $n, 'gender' => $o, 'other_data' => $p))->send();
+    		   _MainModel::viewJSON($id);
     	
     	 }
 
