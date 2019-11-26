@@ -47,11 +47,7 @@ class Users {
   
     	if (empty($_GET ['id'])){
     		$a = $_GET ['id'];
-    		  
-    		}
-    	else{
-    	     //_MainModel::viewJSON(["error"=>"errror"]);    	    
-    	    }if($_GET['level']){$b = $_GET ['level'];}
+    		 if($_GET['level']){$b = $_GET ['level'];}
     	     if($_GET['user_type']){$c = $_GET ['user_type'];}
     	     if($_GET['image']){$d = $_GET ['image'];}
     	     if($_GET['nickname']){$e = $_GET ['nickname'];}
@@ -60,8 +56,11 @@ class Users {
     	     if($_GET['role']){$h = $_GET ['role'];}
     	     if($_GET['status']){$j = $_GET ['status'];}
     	    
-    	     $result1=_MainModel::table("dd_user_cards")->edit(array('id'=>$a), array('level' =>$b, 'user_type' => $c, 'image' =>$d,
-    	     	'nickname'=>$e,'rating' => $f,'description' => $g,'role' => $h,'status' => $j))->send(); 
+    	     $result1=_MainModel::table("dd_user_cards")->edit(array('id'=>$a), array_filter(('level' =>$b, 'user_type' => $c, 'image' =>$d, 'nickname'=>$e,'rating' => $f,'description' => $g,'role' => $h,'status' => $j))->send();  
+    		}
+    	else{
+    	     _MainModel::viewJSON(["error"=>"errror"]);    	    
+    	    }
 
     	}
 
