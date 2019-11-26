@@ -56,11 +56,11 @@ class Users {
     	     if($_GET['role']){$h = $_GET ['role'];}
     	     if($_GET['status']){$j = $_GET ['status'];}
     	    
-    	     $result1=_MainModel::table("dd_user_cards")->edit(array('id'=>$id), array('level' =>$b, 'user_type' => $c,'image' =>$d, 'nickname'=>$e,'rating' => $f,'description' => $g,'role' => $h,'status' => $j))->send();  
+    	     
     		}
     	else{
-    	     _MainModel::viewJSON(["error"=>"errror"]);    	    
-    	    }
+    	     //_MainModel::viewJSON(["error"=>"errror"]);    	    
+    	    }$result1=_MainModel::table("dd_user_cards")->edit(array('id'=>$id), array('level' =>$b, 'user_type' => $c,'image' =>$d, 'nickname'=>$e,'rating' => $f,'description' => $g,'role' => $h,'status' => $j))->send();  
 
     	}
 
