@@ -58,7 +58,7 @@ class Users {
     	     
     	     $result1=_MainModel::table("dd_user_cards")->edit(array('id'=>$id), array('level' =>$b, 'user_type' => $c,'image' =>$d, 'nickname'=>$e,'rating' => $f,'description' => $g,'role' => $h,'status' => $j))->send();   	     
     		}
-    	else{MainModel::viewJSON(["error"=>"errror"]); 
+    	else{_MainModel::viewJSON(["error"=>"errror"]); 
     	        	    
     	    }
     	}
