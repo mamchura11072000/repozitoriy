@@ -36,10 +36,7 @@ class Users {
     	     	 _MainModel::viewJSON($id);
     	}
     	
-    		
-     	 	
-
-   }
+    }
 
 //---------------------------------------------------------------------------------------------------------------------
     
@@ -155,7 +152,7 @@ class Users {
     		$p = $_GET ['other_data'];	
 
     		
-    	        }$id = _MainModel::table("dd_user_person_data")->add(array('password' => $b, 'phone' => $c, 'phone_token' => $d, 'phone_token_data' => $e, 'doc_photo' => $f, 'surname' => $g, 'name' => $h, 'patronymic' => $j, 'timestamp' => $k, 'data_of_brith' => $l, 'address' => $m, 'coordinates' => $n, 'gender' => $o, 'other_data' => $p), array('id'=>$a))->send();
+    	        }$result = _MainModel::table("dd_user_person_data")->add(array('password' => $b, 'phone' => $c, 'phone_token' => $d, 'phone_token_data' => $e, 'doc_photo' => $f, 'surname' => $g, 'name' => $h, 'patronymic' => $j, 'timestamp' => $k, 'data_of_brith' => $l, 'address' => $m, 'coordinates' => $n, 'gender' => $o, 'other_data' => $p), array('id'=>$a))->send();
     	    }
 
 
@@ -172,7 +169,11 @@ class Users {
     		$result = _MainModel::table("dd_user_person_data")->delete(array('id' => $id))->send();
     	    }
     	}
-
+//--------------------------------------------------------------------------------------------------------------------
+    public function getCardsUsers(){
+    	$id=$_GET['id'];
+        $result = _MainModel::table("dd_user_cards")->get(array('id'=>$id))->send();
+        _MainModel::viewJSON($result);   }
     	 
 }
 ?>
