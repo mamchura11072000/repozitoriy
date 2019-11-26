@@ -58,17 +58,17 @@ class Users {
     		}
     	else{
 
-    	$a = $_GET ['id'];
-    	$b = $_GET ['level'];
-    	$c = $_GET ['user_type'];
-    	$d = $_GET ['image'];
-    	$e = $_GET ['nickname'];
-    	$f = $_GET ['rating'];
-    	$g = $_GET ['description'];
-    	$h = $_GET ['role'];
-    	$j = $_GET ['status'];
+    	*$a = $_GET ['id'];
+    	*$b = $_GET ['level'];
+    	*$c = $_GET ['user_type'];
+    	*$d = $_GET ['image'];
+    	*$e = $_GET ['nickname'];
+    	*$f = $_GET ['rating'];
+    	*$g = $_GET ['description'];
+    	*$h = $_GET ['role'];
+    	*$j = $_GET ['status'];
 
-        $result1=_MainModel::table("dd_user_cards")->edit(array_filter('level' => &$b, 'user_type' => &$c, 'image' => &$d,
+        $result1=_MainModel::table("dd_user_cards")->edit(array('level' => &$b, 'user_type' => &$c, 'image' => &$d,
                  'nickname'=>&$e, 'rating' => &$f, 'description' => &$g, 'role' => &$h, 'status' => &$j), array('id'=>&$a))->send();
             } 
         
