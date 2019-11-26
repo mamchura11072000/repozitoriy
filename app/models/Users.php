@@ -87,6 +87,23 @@ class Users {
     	}
 //--------------------------------------------------------------------------------------------------------------------
 
+	public function editStatusUser(){
+    	if (empty($_GET ['id'])||
+    		empty($_GET['status'])){
+    		
+    		 _MainModel::viewJSON(["error"=>"errror"]); 
+    		}
+    	else{
+
+    	$a = $_GET ['id'];
+       	$j = $_GET ['status'];
+
+        $result1=_MainModel::table("dd_user_cards")->edit(array('status' => $j), array('id'=>$a))->send();
+            }
+    	}
+
+//--------------------------------------------------------------------------------------------------------------------
+
     public function addUserPersonData(){
     	if (empty($_GET ['id'])||empty($_GET['password'])||empty ($_GET['phone'])||empty($_GET['phone_token'])||empty($_GET['phone_token_data'])||empty($_GET['doc_photo'])||empty($_GET['surname'])||empty($_GET['name'])||empty($_GET['patronymic'])||empty($_GET['timestamp'])||empty($_GET['data_of_brith'])||empty($_GET['address'])||empty($_GET['coordinates'])||empty($_GET['gender'])||empty($_GET['other_data']))	{
 

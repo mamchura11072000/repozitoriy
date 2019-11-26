@@ -19,6 +19,8 @@ public function editCardsUser(){echo (new Users())->editCardsUser();}
 
 public function deleteCardsUser(){echo (new Users())->deleteCardsUser();}
 
+public function editStatusUser(){echo (new Users())->editStatusUser();}
+
 public function addUserPersonData(){echo (new users())->addUserPersonData();}
 
 public function editUserPersonData(){echo (new users())->editUserPersonData();}
