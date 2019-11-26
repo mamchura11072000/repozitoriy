@@ -62,22 +62,13 @@ class Users {
     	     if(empty($_GET['role'])){$h = $_GET ['role'];}
     	     else{$j = $_GET ['status'];}
     	     if(empty($_GET['status'])){$j = $_GET ['status'];}
-    	     
+    	     $result = _MainModel::table("dd_user_cards")->edit(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j), array('id'=>$id))->send();   
     	          
     		}
     	else{
-    		$id=$_GET['id'];
-    		$b = $_GET ['level'];
-    		$c = $_GET ['user_type'];
-    		$d = $_GET ['image'];
-    		$e = $_GET ['nickname'];
-    	    $f = $_GET ['rating'];
-    		$g = $_GET ['description'];
-    		$h = $_GET ['role'];
-    		$j = $_GET ['status'];
     		_MainModel::viewJSON(["error"=>"errror"]); 
-    	        	    
-    	    }$result = _MainModel::table("dd_user_cards")->edit(array('level' => $b, 'user_type' => $c, 'image' => $d, 'nickname' => $e, 'rating' => $f, 'description' => $g, 'role' => $h, 'status' => $j), array('id'=>$id))->send();     	
+    	     	    
+    	    }  	
     	}    	
 
 //--------------------------------------------------------------------------------------------------------------------
