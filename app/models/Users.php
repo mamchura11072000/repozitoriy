@@ -172,6 +172,7 @@ class Users {
 
 //--------------------------------------------------------------------------------------------------------------------
  public function getPDOUserPersonDataANDCardUser(){
+ 		$connection = new PDO('mysql:host=localhost;username=a_login_db;password=t4mnpwse*8aE;dbname=m_db;charset=utf8', 'root', 'root');
    		
    		$stmt = self::$config->prepare("SELECT * FROM  'dd_user_cards' WHERE id= :id");
 
