@@ -1,6 +1,6 @@
 <?php
  
-class Users extends _MainModel{
+class Users {
 
     public function getListUsers(){
         $result = _MainModel::table("users_cards")->get()->send();
@@ -51,7 +51,8 @@ class Users extends _MainModel{
     		$arr=[];
     		
     		if(!empty ($_GET['level']))	{
-    		   $err=$_GET ['level'];
+    		   $b=$_GET ['level'];
+
 
     		 }    		
     		
