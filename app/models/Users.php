@@ -49,15 +49,17 @@ class Users{
     	else{
     		$id = $_GET ['id'];
     		if(empty ($_GET['level'])){$b = $_GET ['level'];}
-    		if(empty($_GET['user_type'])){$c = $_GET ['user_type'];}
-    	    if(empty($_GET['image'])){$d = $_GET ['image'];}
-    	    if(empty($_GET['nickname'])){$e = $_GET ['nickname'];}
-    	    if(empty($_GET['rating'])){$f = $_GET ['rating'];}
-    	    if(empty($_GET['description'])){$g = $_GET ['description'];}
-    	    if(empty($_GET['role'])){$h = $_GET ['role'];}
-    	    if(empty($_GET['status'])){$j = $_GET ['status'];}
+    		else if(empty($_GET['user_type'])){$c = $_GET ['user_type'];}
+    	    else if(empty($_GET['image'])){$d = $_GET ['image'];}
+    	    else if(empty($_GET['nickname'])){$e = $_GET ['nickname'];}
+    	    else if(empty($_GET['rating'])){$f = $_GET ['rating'];}
+    	    else if(empty($_GET['description'])){$g = $_GET ['description'];}
+    	    else if(empty($_GET['role'])){$h = $_GET ['role'];}
+    	    else if(empty($_GET['status'])){$j = $_GET ['status'];}
 
-    	   
+
+
+
     	    }  	$result = _MainModel::table("dd_user_cards")->edit(filter(array('level','user_type','image','nickname','rating','description','role','status')), array('id'=>$id))->send();   
     	          
     	}    	
