@@ -51,7 +51,7 @@ class Users {
     		$arr=[];
     		
     		if(!empty ($_GET['level']))	{
-    		   $arr($b=$_GET ['level']);
+    		   $arr=$b=$_GET ['level'];
 
 
 
