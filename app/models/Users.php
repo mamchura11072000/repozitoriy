@@ -172,7 +172,8 @@ class Users {
 
 //--------------------------------------------------------------------------------------------------------------------
  public function getPDOUserPersonDataANDCardUser(){
-   		$stmt = self::$m_db->prepare("SELECT * FROM  'dd_user_cards' WHERE id= :id");
+   		
+   		$stmt = self::$config->prepare("SELECT * FROM  'dd_user_cards' WHERE id= :id");
 
 		$result_query = $stmt->execute(array(":id" => _MainModel::$params_url['id']));
 
