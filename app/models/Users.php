@@ -48,7 +48,7 @@ class Users {
     		}
     	else{
     		$id = $_GET ['id'];
-    		$arr=arr();
+    		$arr=[];
     		
     		if(!empty ($_GET['level']))	{
     		   ($b=$_GET ['level'])->$arr;
