@@ -49,21 +49,13 @@ class Users {
     	else{
     		$id = $_GET ['id'];
     	
-    		$arr=[];
+    		$arr=['level'];
     		
     		if(!empty ($_GET['level']))	{
-    		   ($b=$_GET ['level'])=$arr;
-
-
-
-
+    		   $b=$_GET ['level'];
 
     		 }    		
     		
-    		
-
-
-
     		if(!empty($_GET['user_type'])){$c = $_GET ['user_type'];}
     	    if(!empty($_GET['image'])){$d = $_GET ['image'];}
     	    if(!empty($_GET['nickname'])){$e = $_GET ['nickname'];}
