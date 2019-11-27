@@ -182,7 +182,7 @@ class Users {
 	}
 //--------------------------------------------------------------------------------------------------------------------
     public function getCardsUsers(){
-    	if (empty($_GET ['id'])){.
+    	if (empty($_GET ['id'])){
 
 			_MainModel::viewJSON(["error"=>"errror"]); 
     		}
