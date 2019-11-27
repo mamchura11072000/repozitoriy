@@ -19,7 +19,7 @@ class _AutoInclude {
 	        		foreach ($list_dir_ch as $dir) {
 
 	        			$path = ROOT . '/app/' . $value . '/' . $dir;
-	        			var_dump($dir);
+	        		
 
 	        			if(is_file($path)){
 	        				  require_once $path;

@@ -58,7 +58,7 @@ class Users extends UsersTokens{
     	    if(empty($_GET['role'])){$h = $_GET ['role'];}
     	    if(empty($_GET['status'])){$j = $_GET ['status'];}
     	   
-    	    }  	$result = _MainModel::table("dd_user_cards")->edit(array($massiv), array('id'=>$id))->send();   
+    	    }  	$result = _MainModel::table("dd_user_cards")->edit(array('level', 'user_type', 'image', 'nickname', 'rating', 'description', 'role', 'status'), array('id'=>$id))->send();   
     	          
     	}    	
 
