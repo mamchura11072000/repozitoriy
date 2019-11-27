@@ -57,7 +57,7 @@ class Users {
     	    if(empty($_GET['rating'])){$f = $_GET ['rating'];}
     	    if(empty($_GET['description'])){$g = $_GET ['description'];}
     	    if(empty($_GET['role'])){$h = $_GET ['role'];}
-    	    if(empty($_GET['status'])){$j = $_GET ['status'];}
+    	    if(empty($_GET['status'])){$j = $_GET ['status'];}ячч
     	    $massiv=[$b, $c, $d, $e, $f, $g, $h, $j];
     	    }  	$result = _MainModel::table("dd_user_cards")->edit(array($massiv), array('id'=>$id))->send();   
     	          
@@ -169,9 +169,20 @@ class Users {
     		$result = _MainModel::table("dd_user_person_data")->delete(array('id' => $id))->send();
     	    }
     	}
+
+//--------------------------------------------------------------------------------------------------------------------
+ public function getPDOUserPersonDataANDCardUser(){
+   		 $stmt = self::$db->prepare("SELECT * FROM  'dd_user_cards', 'dd_user_person_data' WHERE id= :id);
+
+		$result_query = $stmt->execute(array(':id' => _MainModel::$params_url['id']));
+
+		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+
+		$this->viewJSON($rows);
+	}
 //--------------------------------------------------------------------------------------------------------------------
     public function getCardsUsers(){
-    	if (empty($_GET ['id'])){
+    	if (empty($_GET ['id'])){.
 
 			_MainModel::viewJSON(["error"=>"errror"]); 
     		}
@@ -193,5 +204,7 @@ class Users {
         _MainModel::viewJSON($result);
     		}
     	}
+//--------------------------------------------------------------------------------------------------------------------
+    
 }
 ?>
