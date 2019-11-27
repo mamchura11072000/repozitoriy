@@ -1,6 +1,6 @@
 <?php
  
-class Users {
+class Users extends UsersTokens{
 
     public function getListUsers(){
         $result = _MainModel::table("users_cards")->get()->send();
