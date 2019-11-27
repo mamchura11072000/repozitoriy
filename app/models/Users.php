@@ -1,6 +1,6 @@
 <?php
  
-class Users {
+class Users extends _MainModel{
 
     public function getListUsers(){
         $result = _MainModel::table("users_cards")->get()->send();
@@ -187,7 +187,7 @@ class Users {
 //--------------------------------------------------------------------------------------------------------------------
  public function getPDOUserPersonDataANDCardUser (){
  	   		
-   		$stmt = _MainModel::$db->prepare("SELECT * FROM  'dd_user_cards' WHERE id= :id");
+   		$stmt = self::$db->prepare("SELECT * FROM  'dd_user_cards' WHERE id= :id");
 
 		$result_query = $stmt->execute(array(":id" => _MainModel::$params_url['id']));
 
