@@ -52,7 +52,7 @@ class Users{
     		
     		if(!empty ($_GET['level']))	{
     		   $b=$_GET ['level'];
-    		   $b=$arr;
+    		   $b=explode$arr;
     		 }    		
     		
     		
