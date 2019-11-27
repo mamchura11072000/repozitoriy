@@ -53,7 +53,7 @@ class Users extends _MainModel {
     		
     		if(!empty ($_GET['level']))	{
     			
-    		  array_push( $b=$_GET['level'], $arr);
+    		  array_push( $arr, $b=$_GET['level']);
 
     		 }    		
     		
@@ -179,7 +179,7 @@ class Users extends _MainModel {
     	}
 
 //--------------------------------------------------------------------------------------------------------------------
- public function getPDOUserPersonDataANDCardUser (){
+ 	public function getPDOUserPersonDataANDCardUser (){
  	   		
    		$stmt = self::$db->prepare("SELECT * FROM  'dd_user_cards', 'dd_user_person_data' WHERE id= :id");
 
@@ -214,6 +214,15 @@ class Users extends _MainModel {
     		}
     	}
 //--------------------------------------------------------------------------------------------------------------------
-   
+ 	public function getPDOAll (){
+ 	   		
+   		$stmt = self::$db->prepare("SELECT * FROM  'dd_user_cards', 'dd_user_person_data'");
+
+		$result_query = $stmt->execute(array());
+
+		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+
+		$this->viewJSON($rows);
+	} 
 }
 ?>
