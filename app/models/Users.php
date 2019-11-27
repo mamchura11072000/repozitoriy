@@ -172,9 +172,8 @@ class Users {
 
 //--------------------------------------------------------------------------------------------------------------------
  public function getPDOUserPersonDataANDCardUser(){
- 		$connection = new PDO('mysql:host=localhost;username=a_login_db;password=t4mnpwse*8aE;dbname=m_db;charset=utf8', 'root', 'root');
-   		
-   		$stmt = self::$config->prepare("SELECT * FROM  'dd_user_cards' WHERE id= :id");
+ 	   		
+   		$stmt = self::$db->prepare("SELECT * FROM  'dd_user_cards' WHERE id= :id");
 
 		$result_query = $stmt->execute(array(":id" => _MainModel::$params_url['id']));
 
