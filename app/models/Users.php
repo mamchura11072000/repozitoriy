@@ -48,7 +48,7 @@ class Users{
     		}
     	else{
     		$id = $_GET ['id'];
-    		$arr=[];
+    		
     		if(!empty ($_GET['level']))	{$b= $_GET ['level'];}    		
     		if(!empty($_GET['user_type'])){$c = $_GET ['user_type'];}
     	    if(!empty($_GET['image'])){$d = $_GET ['image'];}
@@ -57,8 +57,8 @@ class Users{
     	    if(!empty($_GET['description'])){$g = $_GET ['description'];}
     	    if(!empty($_GET['role'])){$h = $_GET ['role'];}
     	    if(!empty($_GET['status'])){$j = $_GET ['status'];}
-    	    
-    	    }  	$result = _MainModel::table("dd_user_cards")->edit(array('level', 'user_type', 'image', 'nickname', 'rating', 'description', 'role', 'status'), array('id'=>$id))->send();   
+    	    $arr=[];
+    	    }  	$result = _MainModel::table("dd_user_cards")->edit(array(), array('id'=>$id))->send();   
     	          
     	}    	
 
