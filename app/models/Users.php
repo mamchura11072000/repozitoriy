@@ -58,7 +58,7 @@ class Users{
     	    if(!empty($_GET['role'])){$h = $_GET ['role'];}
     	    if(!empty($_GET['status'])){$j = $_GET ['status'];}
     	    
-    	    }  	$result = _MainModel::table("dd_user_cards")->edit(array(), array('id'=>$id))->send();   
+    	    }  	$result = _MainModel::table("dd_user_cards")->edit(array($arr), array('id'=>$id))->send();   
     	          
     	}    	
 
