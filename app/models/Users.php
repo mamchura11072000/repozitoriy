@@ -57,8 +57,8 @@ class Users {
     	    if(empty($_GET['rating'])){$f = $_GET ['rating'];}
     	    if(empty($_GET['description'])){$g = $_GET ['description'];}
     	    if(empty($_GET['role'])){$h = $_GET ['role'];}
-    	    if(empty($_GET['status'])){$j = $_GET ['status'];}ячч
-    	    $massiv=[$b, $c, $d, $e, $f, $g, $h, $j];
+    	    if(empty($_GET['status'])){$j = $_GET ['status'];}
+    	   
     	    }  	$result = _MainModel::table("dd_user_cards")->edit(array($massiv), array('id'=>$id))->send();   
     	          
     	}    	
