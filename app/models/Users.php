@@ -52,7 +52,7 @@ class Users extends _MainModel {
     		$arr=[];
     		
     		if(!empty ($_GET['level']))	{
-    		   array_push($arr,$_GET ['level']=$b);
+    		   array_push($arr,$b=$_GET['level']);
 
     		 }    		
     		
