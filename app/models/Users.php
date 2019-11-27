@@ -191,7 +191,7 @@ class Users {
         	$result = _MainModel::table("dd_user_cards")->get(array("level", "user_type", "image", "nickname", "rating", "description", "role", "status"))->filter(array('id'=>$id))->send();
         _MainModel::viewJSON($result);
     		}
-    	}
+    	}*/ 
 //--------------------------------------------------------------------------------------------------------------------
     public function getUserPersonData(){
     	if (empty($_GET ['id'])){
@@ -205,6 +205,6 @@ class Users {
     		}
     	}
 //--------------------------------------------------------------------------------------------------------------------
-   */ 
+   
 }
 ?>
