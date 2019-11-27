@@ -29,7 +29,7 @@ public function deleteUserPersonData(){echo (new users())->deleteUserPersonData(
 
 public function getCardsUsers(){echo (new users())->getCardsUsers();}
 
-public function getUserPersonData(){echo (new users())->getUserPersonData();}
+//public function getUserPersonData(){echo (new users())->getUserPersonData();}
 
 public function getPDOUserPersonDataANDCardUser(){echo (new users())->getPDOUserPersonDataANDCardUser();}
 	/* labels */
