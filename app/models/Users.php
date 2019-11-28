@@ -144,7 +144,7 @@ class Users extends _MainModel {
 
     	 	$arr=[];
     		if(!empty($_GET['password'])){$b = $_GET ['password']; $arr['password']=$b;}
-    		if(!empty($_GET['phone'])){$c = $_GET ['phone'];$arr['phone']=$c;}
+    		//if(!empty($_GET['phone'])){$c = $_GET ['phone'];$arr['phone']=$c;}
     		if(!empty($_GET['phone_token'])){$d = $_GET ['phone_token'];$arr['phone_token']=$d;}
     		if(!empty($_GET['phone_token_data'])){$e =$_GET ['phone_token_data'];$arr['phone_token_data']=$e;}
     		if(!empty($_GET['doc_photo'])){$f = $_GET ['doc_photo'];$arr['doc_photo']=$f;}
