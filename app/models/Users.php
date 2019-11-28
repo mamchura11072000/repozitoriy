@@ -176,10 +176,10 @@ class Users extends _MainModel {
 //--------------------------------------------------------------------------------------------------------------------
  	public function getPDOUserPersonDataANDCardUser (){
  	   		
-   		$stmt = self::$db->prepare("SELECT * FROM  `x16_table` WHERE id= :id AND status = :status");
-   		$result_query = $stmt->execute(array(":id" => _MainModel::$params_url['id'], ":status" => _MainModel::$params_url['status']));
+   		$stmt = self::$db->prepare("SELECT * FROM  'dd_user_cards' WHERE id= :id ");
+   		$result_query = $stmt->execute(array(":id" => _MainModel::$params_url['id']));
 
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
 
 		_MainModel::viewJSON($rows);
 	}
