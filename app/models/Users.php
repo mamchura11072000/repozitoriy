@@ -62,7 +62,7 @@ class Users extends _MainModel {
 
 
     	     
-    	    }  $result = _MainModel::table("dd_user_cards")->edit(array(), array('id'=>$id))->send();
+    	    }  $result = _MainModel::table("dd_user_cards")->edit(array($b, $c, $d, $e, $f, $g, $h, $j), array('id'=>$id))->send();
     	          
     	}    	
 
