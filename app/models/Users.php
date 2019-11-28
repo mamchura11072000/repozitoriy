@@ -42,7 +42,7 @@ class Users extends _MainModel {
     public function editCardsUser(){
   
     	if (empty($_GET ['id'])){
-    		$b=$_GET['level']
+    		$b=$_GET['level'];
     	
     		 _MainModel::viewJSON(["error"=>"errror"]); 
 
