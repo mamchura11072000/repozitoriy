@@ -191,10 +191,10 @@ class Users extends _MainModel {
 //--------------------------------------------------------------------------------------------------------------------
  	public function getPDOAll (){
  	   		
-   		$stmt = self::$db->prepare("SELECT * FROM dd_user_cards WHERE id=:id
-	UNION SELECT * FROM dd_user_person_data WHERE id=:id" );
+   		$stmt = self::$db->prepare("SELECT * FROM dd_user_cards WHERE id>=:id
+	UNION SELECT * FROM dd_user_person_data WHERE id<=:id" );
 
-		$result_query = $stmt->execute(array(":id" => _MainModel::$params_url [3]));
+		$result_query = $stmt->execute(array(":id" => _MainModel::$params_url ['id']));
 
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
 
