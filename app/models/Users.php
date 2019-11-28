@@ -58,9 +58,9 @@ class Users extends _MainModel {
     	    if(!empty($_GET['rating'])){$f = $_GET ['rating']; $arr['rating']=$f;}
     	    if(!empty($_GET['description'])){$g = $_GET ['description']; $arr['description']=$g;}
     	    if(!empty($_GET['role'])){$h = $_GET ['role']; $arr['role']=$h;}
-    	    if(!empty($_GET['status'])){$j = $_GET ['status']; $arr['status']=$j; }
-    	    print_r($arr);
-    	    $result = _MainModel::table("dd_user_cards")->edit(array(), array('id'=>$id))->send();
+    	    if(!empty($_GET['status'])){$j = $_GET ['status']; $arr['status']=$j;}
+    	    
+    	    $result = _MainModel::table("dd_user_cards")->edit(array('level', 'user_type'), array('id'=>$id))->send();
    	        } 
     	          
     	}    	
