@@ -51,7 +51,7 @@ class Users extends _MainModel {
     	
     		$arr=[];
     		
-    		if(!empty($_GET['level'])){$b=$_GET['level']; $arr['level']=$b;}
+    		if(!empty($_GET['level'])){$arr[$_GET['level']]=$b;}
     		if(!empty($_GET['user_type'])){$c = $_GET ['user_type']; $arr['user_type']=$c;}
     	    if(!empty($_GET['image'])){$d = $_GET ['image']; $arr['image']=$d;}
     	    if(!empty($_GET['nickname'])){$e = $_GET ['nickname']; $arr['nickname']=$e;}
@@ -144,7 +144,7 @@ class Users extends _MainModel {
 
     	 	$arr=[];
     		if(!empty($_GET['password'])){$b = $_GET ['password']; $arr['password']=$b;}
-    		//if(!empty($_GET['phone'])){$c = $_GET ['phone'];$arr['phone']=$c;}
+    		if(!empty($_GET['phone'])){$c = $_GET ['phone'];$arr['phone']=$c;}
     		if(!empty($_GET['phone_token'])){$d = $_GET ['phone_token'];$arr['phone_token']=$d;}
     		if(!empty($_GET['phone_token_data'])){$e =$_GET ['phone_token_data'];$arr['phone_token_data']=$e;}
     		if(!empty($_GET['doc_photo'])){$f = $_GET ['doc_photo'];$arr['doc_photo']=$f;}
@@ -158,7 +158,7 @@ class Users extends _MainModel {
     		if(!empty($_GET['gender'])){$o = $_GET ['gender'];$arr['gender']=$o;}
     		if(!empty($_GET['other_data'])){$p = $_GET ['other_data'];$arr['other_data']=$p;}
     		    		
-    	        }$result = _MainModel::table("dd_user_person_data")->add(array_merge($arr), array('id'=>$a))->send();
+    	        }$result = _MainModel::table("dd_user_person_data")->add($arr, array('id'=>$a))->send();
     	    }
 
 
