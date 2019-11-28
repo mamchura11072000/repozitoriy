@@ -158,7 +158,7 @@ class Users extends _MainModel {
     		if(!empty($_GET['gender'])){$o = $_GET ['gender'];$arr['gender']=$o;}
     		if(!empty($_GET['other_data'])){$p = $_GET ['other_data'];$arr['other_data']=$p;}
     		    		
-    	        }$result = _MainModel::table("dd_user_person_data")->add(array(), array('id'=>$a))->send();
+    	        }$result = _MainModel::table("dd_user_person_data")->add(array_merge($arr), array('id'=>$a))->send();
     	    }
 
 
