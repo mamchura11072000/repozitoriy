@@ -158,8 +158,8 @@ class Users extends _MainModel {
     		if(!empty($_GET['coordinates'])){$n = $_GET ['coordinates'];$arr['coordinates']=$n;}
     		if(!empty($_GET['gender'])){$o = $_GET ['gender'];$arr['gender']=$o;}
     		if(!empty($_GET['other_data'])){$p = $_GET ['other_data'];$arr['other_data']=$p;}
-    		    		
-    	        }$result = _MainModel::table("dd_user_person_data")->edit($arr, array('id'=>$a))->send();
+    		$result = _MainModel::table("dd_user_person_data")->edit($arr, array('id'=>$a))->send();    		
+    	        }
     	    }
 
 
