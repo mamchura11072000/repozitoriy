@@ -52,7 +52,7 @@ class Users extends _MainModel {
     	
     		$arr=[];
     		
-    		if(!empty($b=$_GET['level'])){$arr['level']=$b;}
+    		if(!empty($_GET['level'])){$arr['level']=$b;}
     		if(!empty($_GET['user_type'])){$c = $_GET ['user_type']; $arr['user_type']=$c;}
     	    if(!empty($_GET['image'])){$d = $_GET ['image']; $arr['image']=$d;}
     	    if(!empty($_GET['nickname'])){$e = $_GET ['nickname']; $arr['nickname']=$e;}
@@ -181,7 +181,7 @@ class Users extends _MainModel {
  	public function getPDOUserPersonDataANDCardUser (){
  	   		
    		$stmt = self::$db->prepare("SELECT * FROM  'dd_user_cards' WHERE id= :id ");
-   		$result_query = $stmt->execute(array(":id" => _MainModel::$params_url['id']));
+   		$result_query = $stmt->execute(array(":id" => id));
 
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
 
