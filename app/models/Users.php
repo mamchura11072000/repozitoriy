@@ -177,7 +177,7 @@ class Users extends _MainModel {
  	public function getPDOUserPersonDataANDCardUser (){
  	   		
    		$stmt = self::$db->prepare("SELECT * FROM  'dd_user_cards' WHERE id= :id ");
-   		$result_query = $stmt->execute(array(":id" => _MainModel::$params_url[12]));
+   		$result_query = $stmt->execute(array(":id" => _MainModel::$params_url['id']));
 
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
 
