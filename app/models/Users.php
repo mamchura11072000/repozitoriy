@@ -131,30 +131,32 @@ class Users extends _MainModel {
 //--------------------------------------------------------------------------------------------------------------------
 
    public function editUserPersonData(){
-    	if (empty($_GET ['id'])||empty($_GET['password'])||empty ($_GET['phone'])||empty($_GET['phone_token'])||empty($_GET['phone_token_data'])||empty($_GET['doc_photo'])||empty($_GET['surname'])||empty($_GET['name'])||empty($_GET['patronymic'])||empty($_GET['timestamp'])||empty($_GET['data_of_brith'])||empty($_GET['address'])||empty($_GET['coordinates'])||empty($_GET['gender'])||empty($_GET['other_data']))	{
+    	if (empty($_GET ['id'])){
 
-    		//_MainModel::viewJSON(["error"=>"errrror"]);
+    		_MainModel::viewJSON(["error"=>"errrror"]);
     	    	      		
     		}
     	else{    
 
-    	 	$a = $_GET ['id'];$b = $_GET ['password'];
-    		$c = $_GET ['phone'];
-    		$d = $_GET ['phone_token'];
-    		$e = $_GET ['phone_token_data'];
-    		$f = $_GET ['doc_photo'];
-    		$g = $_GET ['surname'];
-    		$h = $_GET ['name'];
-    		$j = $_GET ['patronymic'];
-    		$k = $_GET ['timestamp'];
-    		$l = $_GET ['data_of_brith'];
-    		$m = $_GET ['address'];
-    		$n = $_GET ['coordinates'];
-    		$o = $_GET ['gender'];
-    		$p = $_GET ['other_data'];	
+    	 	$a = $_GET ['id'];
 
-    		
-    	        }$result = _MainModel::table("dd_user_person_data")->add(array('password' => $b, 'phone' => $c, 'phone_token' => $d, 'phone_token_data' => $e, 'doc_photo' => $f, 'surname' => $g, 'name' => $h, 'patronymic' => $j, 'timestamp' => $k, 'data_of_brith' => $l, 'address' => $m, 'coordinates' => $n, 'gender' => $o, 'other_data' => $p), array('id'=>$a))->send();
+    	 	$arr=[];
+    		if(!empty($_GET['password'])){$b = $_GET ['password']; $arr['password']=$b;}
+    		if(!empty($_GET['phone'])){$c = $_GET ['phone'];$arr['phone']=$c;}
+    		if(!empty($_GET['phone_token'])){$d = $_GET ['phone_token'];$arr['phone_token']=$d;}
+    		if(!empty($_GET['phone_token_data'])){$e =$_GET ['phone_token_data'];$arr['phone_token_data']=$e;}
+    		if(!empty($_GET['doc_photo'])){$f = $_GET ['doc_photo'];$arr['doc_photo']=$f;}
+    		if(!empty($_GET['surname'])){$g = $_GET ['surname'];$arr['surname']=$g;}
+    		if(!empty($_GET['name'])){$h = $_GET ['name'];$arr['name']=$h;}
+    		if(!empty($_GET['patronymic'])){$j = $_GET ['patronymic'];$arr['patronymic']=$j;}
+    		if(!empty($_GET['timestamp'])){$k = $_GET ['timestamp'];$arr['timestamp']=$k;}
+    		if(!empty($_GET['data_of_brith'])){$l = $_GET ['data_of_brith'];$arr['data_of_brith']=$l;}
+    		if(!empty($_GET['address'])){$m = $_GET ['address'];$arr['address']=$m;}
+    		if(!empty($_GET['coordinates'])){$n = $_GET ['coordinates'];$arr['coordinates']=$n;}
+    		if(!empty($_GET['gender'])){$o = $_GET ['gender'];$arr['gender']=$o;}
+    		if(!empty($_GET['other_data'])){$p = $_GET ['other_data'];$arr['other_data']=$p;}
+    		    		
+    	        }$result = _MainModel::table("dd_user_person_data")->add(array(), array('id'=>$a))->send();
     	    }
 
 
