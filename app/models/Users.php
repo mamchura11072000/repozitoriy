@@ -180,10 +180,7 @@ class Users extends _MainModel {
 //--------------------------------------------------------------------------------------------------------------------
  	public function getPDOUserPersonDataANDCardUser (){
  	   		
-   		$stmt = self::$db->prepare("SELECT  id, level, user_type, image, nickname, rating, description, role, status
-   FROM dd_user_cards
-   LEFT JOIN dd_user_person_data
-   ON dd_user_cards.id = dd_user_person_data.id;");
+   		$stmt = self::$db->prepare("SELECT * FROM  dd_user_person_data WHERE id= :id");
    		$result_query = $stmt->execute(array(":id" => _MainModel::$params_url ['id']));
 
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
