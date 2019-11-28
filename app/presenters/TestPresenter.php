@@ -34,6 +34,8 @@ public function getUserPersonData(){echo (new users())->getUserPersonData();}
 public function getPDOUserPersonDataANDCardUser(){echo (new users())->getPDOUserPersonDataANDCardUser();}
 
 public function getPDOAll (){echo (new users())->getPDOAll();}
+
+public function getPDOAlll (){echo (new users())->getPDOAlll();}
 	/* labels */
 	//public function ruLableTable(){ $this->renderLabel('rus', 'labelLayoutTable'); }
 
