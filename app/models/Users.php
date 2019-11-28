@@ -52,13 +52,13 @@ class Users extends _MainModel {
     		$arr=[];
     		
     		if(!empty ($_GET['level']))	{
-    		$b=$_GET['level'];	
-    		array_push($arr, 'level'=>$b);
+    		$b=$_GET['level']	
+    		array_push($arr,);
     		print_r($arr);
 
     		 }    		
     		
-    		if(!empty($_GET['user_type'])){$c = $_GET ['user_type'];}
+    		if(!empty($_GET['user_type'])){array_push($arr,$c = $_GET ['user_type']);print_r($arr);}
     	    if(!empty($_GET['image'])){$d = $_GET ['image'];}
     	    if(!empty($_GET['nickname'])){$e = $_GET ['nickname'];}
     	    if(!empty($_GET['rating'])){$f = $_GET ['rating'];}
