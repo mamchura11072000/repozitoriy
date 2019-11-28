@@ -181,42 +181,19 @@ class Users extends _MainModel {
  	public function getPDOUserPersonDataANDCardUser (){
  	   		
    		$stmt = self::$db->prepare("SELECT * FROM dd_user_cards, dd_user_person_data ");
-   		$result_query = $stmt->execute(array(":id" => _MainModel::$params_url ['id']));
+   		$result_query = $stmt->execute(array());
 
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
 
 		_MainModel::viewJSON($rows);
 	}
-/*--------------------------------------------------------------------------------------------------------------------
-    public function getCardsUsers(){
-    	if (empty($_GET ['id'])){
 
-			_MainModel::viewJSON(["error"=>"errror"]); 
-    		}
-    	else{
-    		$id=$_GET['id'];
-        	$result = _MainModel::table("dd_user_cards")->get(array("level", "user_type", "image", "nickname", "rating", "description", "role", "status"))->filter(array('id'=>$id))->send();
-        _MainModel::viewJSON($result);
-    		}
-    	}*/ 
-//--------------------------------------------------------------------------------------------------------------------
-    public function getUserPersonData(){
-    	if (empty($_GET ['id'])){
-
-			_MainModel::viewJSON(["error"=>"errror"]); 
-    		}
-    	else{
-    		$id=$_GET['id'];
-        	$result = _MainModel::table("dd_user_cards")->get(array("password", "phone", "phone_token", "phone_token_data", "doc_photo", "surname", "name", "patronymic", "timestamp", "data_of_brith","address", "coordinates", "gender", "other_data"))->filter(array('id'=>$id))->send();
-        _MainModel::viewJSON($result);
-    		}
-    	}
 //--------------------------------------------------------------------------------------------------------------------
  	public function getPDOAll (){
  	   		
-   		$stmt = self::$db->prepare("SELECT * FROM  'dd_user_cards', 'dd_user_person_data'");
+   		$stmt = self::$db->prepare("SELECT * FROM  dd_user_cards, dd_user_person_data");
 
-		$result_query = $stmt->execute(array());
+		$result_query = $stmt->execute(array(":id" => _MainModel::$params_url ['id']));
 
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
 
