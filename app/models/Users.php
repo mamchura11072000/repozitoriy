@@ -60,6 +60,7 @@ class Users extends _MainModel {
     	    if(!empty($_GET['role'])){$h = $_GET ['role']; $arr['role']=$h;}
     	    if(!empty($_GET['status'])){$j = $_GET ['status']; $arr['status']=$j;}
 
+    	    $row=$arr+$result;
     	    $result = _MainModel::table("dd_user_cards")->edit(array(), array('id'=>$id))->send();
    	        } 
     	          
