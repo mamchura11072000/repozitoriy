@@ -182,7 +182,7 @@ class Users extends _MainModel {
 
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
 
-		$this->viewJSON($rows);
+		_MainModel::viewJSON($rows);
 	}
 /*--------------------------------------------------------------------------------------------------------------------
     public function getCardsUsers(){
