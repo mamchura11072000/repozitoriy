@@ -51,7 +51,7 @@ class Users extends _MainModel {
     	
     		$arr=[];
     		
-    		if(!empty ($_GET['level']))	{$b=$_GET['level'];	$arr['level']=$b;print_r($arr);}
+    		if(!empty ($_GET['level']))	{$b=$_GET['level'];	$arr['level']=$b;}
     		if(!empty($_GET['user_type'])){$c = $_GET ['user_type']; $arr['user_type']=$c;}
     	    if(!empty($_GET['image'])){$d = $_GET ['image']; $arr['image']=$d;}
     	    if(!empty($_GET['nickname'])){$e = $_GET ['nickname']; $arr['nickname']=$e;}
@@ -59,6 +59,7 @@ class Users extends _MainModel {
     	    if(!empty($_GET['description'])){$g = $_GET ['description']; $arr['description']=$g;}
     	    if(!empty($_GET['role'])){$h = $_GET ['role']; $arr['role']=$h;}
     	    if(!empty($_GET['status'])){$j = $_GET ['status']; $arr['status']=$j; print_r($arr);}
+    	    print_r($arr);
             $arr = _MainModel::table("dd_user_cards")->edit(array(), array('id'=>$id))->send();
    	     
     	    } 
