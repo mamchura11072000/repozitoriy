@@ -199,11 +199,11 @@ class Users extends _MainModel {
  	   	 }*/	
  	   	$stmt1 = self::$db->prepare("SELECT * FROM dd_user_person_data WHERE id=:id");
 
-		$result_query1 = $stmt->execute(array(":id"=>_MainModel::$params_url ['id']));
+		$result_query1 = $stmt1->execute(array(":id"=>_MainModel::$params_url ['id']));
 
 		$stmt2 = self::$db->prepare("SELECT * FROM dd_user_cards WHERE  id=:id");
 
-		$result_query2 = $stmt->execute(array(":id"=>_MainModel::$params_url ['id']));
+		$result_query2 = $stmt2->execute(array(":id"=>_MainModel::$params_url ['id']));
 
 		$rows = $stmt1->$stmt2->fetchAll(PDO::FETCH_ASSOC); 
 
