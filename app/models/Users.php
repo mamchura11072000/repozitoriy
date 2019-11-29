@@ -20,7 +20,7 @@ class Users extends _MainModel {
 //--------------------------------------------------------------------------------------------------------------------
     public function editCardsUser(){
       	if (empty($_GET ['id'])){
-    		_MainModel::viewJSON(["error"=>"Empty params"]); 
+    		_MainModel::viewJSON(["error"=>"Empty ID"]); 
     	}else{
     		$id = $_GET ['id'];
     		$arr=[];
@@ -39,7 +39,7 @@ class Users extends _MainModel {
     
     public function deleteCardsUser(){
     	if (empty($_GET ['id'])){
-    		_MainModel::viewJSON(["error"=>"errror"]);
+    		_MainModel::viewJSON(["error"=>"Empty ID"]);
     	}else{
     		$id = $_GET ['id'];
     		$result = _MainModel::table("dd_user_cards")->delete(array('id' => $id))->send();
@@ -48,7 +48,7 @@ class Users extends _MainModel {
 //--------------------------------------------------------------------------------------------------------------------
 	public function editStatusUser(){
     	if (empty($_GET ['id'])||empty($_GET['status'])){
-    		_MainModel::viewJSON(["error"=>""]); 
+    		_MainModel::viewJSON(["error"=>"Empty params"]); 
     	}else{
     		$a = $_GET ['id'];
     		$j = $_GET ['status'];
@@ -58,7 +58,7 @@ class Users extends _MainModel {
 //--------------------------------------------------------------------------------------------------------------------
     public function addUserPersonData(){
     	if (empty($_GET['password'])||empty ($_GET['phone'])||empty($_GET['phone_token'])||empty($_GET['phone_token_data'])||empty($_GET['doc_photo'])||empty($_GET['surname'])||empty($_GET['name'])||empty($_GET['patronymic'])||empty($_GET['timestamp'])||empty($_GET['data_of_brith'])||empty($_GET['address'])||empty($_GET['coordinates'])||empty($_GET['gender'])||empty($_GET['other_data'])){
-    		_MainModel::viewJSON(["error"=>"errrror"]);
+    		_MainModel::viewJSON(["error"=>"Empty params"]);
     	}else{ 
     	 	$b = $_GET ['password'];
     		$c = $_GET ['phone'];
@@ -81,7 +81,7 @@ class Users extends _MainModel {
 //--------------------------------------------------------------------------------------------------------------------
    public function editUserPersonData(){
     	if (empty($_GET ['id'])){
-    		_MainModel::viewJSON(["error"=>"errrror"]);  	    	
+    		_MainModel::viewJSON(["error"=>"Empty ID"]);  	    	
     	}else{
     		$a = $_GET ['id'];
     	 	$arr=[];
@@ -105,7 +105,7 @@ class Users extends _MainModel {
 //--------------------------------------------------------------------------------------------------------------------
     public function deleteUserPersonData(){
     	if (empty($_GET ['id'])){
-    		_MainModel::viewJSON(["error"=>"errror"]); 
+    		_MainModel::viewJSON(["error"=>"Empty ID"]); 
     	}else{
     		$id = $_GET ['id'];
     		$result = _MainModel::table("dd_user_person_data")->delete(array('id' => $id))->send();
@@ -114,7 +114,7 @@ class Users extends _MainModel {
 //--------------------------------------------------------------------------------------------------------------------
  	public function getPDOUserPersonDataANDCardUser (){
  		if(empty(_MainModel::$params_url ['id'])){
- 			_MainModel::viewJSON(["Error"=>"отсутствует id"]);
+ 			_MainModel::viewJSON(["Error"=>"Empty ID"]);
  	   }else{
  	   		$stmt = self::$db->prepare("SELECT * FROM dd_user_person_data JOIN dd_user_cards WHERE dd_user_cards.id = dd_user_person_data.id AND dd_user_person_data.id=:id");
  	   		$result_query = $stmt->execute(array(":id"=>_MainModel::$params_url ['id']));
