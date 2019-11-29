@@ -197,7 +197,7 @@ class Users extends _MainModel {
  	   	 else{
  	   	 
  	   	 }*/	$stmt = self::$db->prepare("
-     SELECT dd_user_cards.* dd_user_person_data* FROM dd_user_cards, dd_user_person_data WHERE id=:id");
+     SELECT  dd_user_person_data* FROM dd_user_person_data WHERE id=:id");
 
 		$result_query = $stmt->execute(array(_MainModel::$params_url ['id']));
 
