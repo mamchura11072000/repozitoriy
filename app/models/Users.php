@@ -4,13 +4,13 @@ class Users extends _MainModel {
 //------------------------------------------------------------------------------------------------------------------  
     public function addCardsUser(){
        	if (empty($_GET['level'])||empty ($_GET['user_type'])||empty($_GET['image'])||empty($_GET['nickname'])||	empty($_GET['rating'])||empty($_GET['description'])||empty($_GET['role'])||	empty($_GET['status'])){
-            _MainModel::viewJSON(["error"=>"errror"]); 
+            _MainModel::viewJSON(["error"=>"Empty params"]);; 
     	}else{
     		$b = $_GET ['level'];
     		$c = $_GET ['user_type'];
     		$d = $_GET ['image'];
     		$e = $_GET ['nickname'];
-    	    $f = $_GET ['rating'];
+    		$f = $_GET ['rating'];
     		$g = $_GET ['description'];
     		$h = $_GET ['role'];
     		$j = $_GET ['status'];
@@ -20,7 +20,7 @@ class Users extends _MainModel {
 //--------------------------------------------------------------------------------------------------------------------
     public function editCardsUser(){
       	if (empty($_GET ['id'])){
-    		_MainModel::viewJSON(["error"=>"errror"]); 
+    		_MainModel::viewJSON(["error"=>"Empty params"]); 
     	}else{
     		$id = $_GET ['id'];
     		$arr=[];
