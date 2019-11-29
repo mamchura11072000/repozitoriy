@@ -49,10 +49,11 @@ class Users extends _MainModel {
     		}
     	else{
     		$id = $_GET ['id'];
+    		$b=$_GET['level'];
     	
     		$arr=[];
     		
-    		if(!empty($_GET['level'])){$arr['level']=$b; $arr['level']=$b;}
+    		if(!empty($_GET['level'])){$arr['level']=$b;}
     		if(!empty($_GET['user_type'])){$c = $_GET ['user_type']; $arr['user_type']=$c;}
     	    if(!empty($_GET['image'])){$d = $_GET ['image']; $arr['image']=$d;}
     	    if(!empty($_GET['nickname'])){$e = $_GET ['nickname']; $arr['nickname']=$e;}
@@ -190,14 +191,12 @@ class Users extends _MainModel {
 
 //--------------------------------------------------------------------------------------------------------------------
  	public function getPDOAll (){
- 	   	/*if(empty(_MainModel::$params_url ['id'])){
+ 	   	if(empty(_MainModel::$params_url ['id'])){
 
  	   	_MainModel::viewJSON(["Error"=>"отсутствует id"]);
  	   	    }
  	   	 else{
- 	   	 
- 	   	 }*/	
- 	   	$stmt = self::$db->prepare("SELECT * FROM dd_user_person_data JOIN dd_user_cards WHERE dd_user_cards.id = dd_user_person_data.id AND dd_user_person_data.id=:id");
+ 	   	 	$stmt = self::$db->prepare("SELECT * FROM dd_user_person_data JOIN dd_user_cards WHERE dd_user_cards.id = dd_user_person_data.id AND dd_user_person_data.id=:id");
 
 		$result_query = $stmt->execute(array(":id"=>_MainModel::$params_url ['id']));
 
@@ -205,6 +204,8 @@ class Users extends _MainModel {
 
 		_MainModel::viewJSON($rows);
 
+ 	   	 }	
+ 	   
    		 	  
 	}
 
