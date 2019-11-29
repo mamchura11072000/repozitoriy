@@ -3,7 +3,7 @@
 class Users extends _MainModel {
 //------------------------------------------------------------------------------------------------------------------  
     public function addCardsUser(){
-       	if (empty($_GET['level'])||empty ($_GET['user_type'])||empty($_GET['image'])||empty($_GET['nickname'])||	empty($_GET['rating'])||empty($_GET['description'])||empty($_GET['role'])||	empty($_GET['status'])){
+       	if (empty($_GET['level'])||empty ($_GET['user_type'])||empty($_GET['image'])||empty($_GET['nickname'])||	empty($_GET['rating'])||empty($_GET['description'])||empty($_GET['role'])||empty($_GET['status'])){
             _MainModel::viewJSON(["error"=>"Empty params"]);; 
     	}else{
     		$b = $_GET ['level'];
@@ -39,7 +39,7 @@ class Users extends _MainModel {
     
     public function deleteCardsUser(){
     	if (empty($_GET ['id'])){
-			_MainModel::viewJSON(["error"=>"errror"]);
+    		_MainModel::viewJSON(["error"=>"errror"]);
     	}else{
     		$id = $_GET ['id'];
     		$result = _MainModel::table("dd_user_cards")->delete(array('id' => $id))->send();
@@ -105,7 +105,7 @@ class Users extends _MainModel {
 //--------------------------------------------------------------------------------------------------------------------
     public function deleteUserPersonData(){
     	if (empty($_GET ['id'])){
-			_MainModel::viewJSON(["error"=>"errror"]); 
+    		_MainModel::viewJSON(["error"=>"errror"]); 
     	}else{
     		$id = $_GET ['id'];
     		$result = _MainModel::table("dd_user_person_data")->delete(array('id' => $id))->send();
@@ -125,8 +125,8 @@ class Users extends _MainModel {
 //--------------------------------------------------------------------------------------------------------------------
 	public function getPDOAll (){
 			$stmt = self::$db->prepare("SELECT * FROM dd_user_cards JOIN dd_user_person_data WHERE dd_user_cards.id = dd_user_person_data.id");
-   			$result_query = $stmt->execute(array());
-			$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+			$result_query = $stmt->execute(array());
+			$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			_MainModel::viewJSON($rows);
 	}
 }
