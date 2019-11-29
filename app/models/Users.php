@@ -3,9 +3,7 @@
 class Users extends _MainModel {
 //------------------------------------------------------------------------------------------------------------------  
     public function addCardsUser(){
-    	if (empty($_GET['level'])||empty ($_GET['user_type'])||empty($_GET['image'])||
-    		empty($_GET['nickname'])||  		empty($_GET['rating'])||empty($_GET['description'])||
-    		empty($_GET['role'])||empty($_GET['status'])){
+    	if (empty($_GET['level'])||empty ($_GET['user_type'])||empty($_GET['image'])||empty($_GET['nickname'])||empty($_GET['rating'])||empty($_GET['description'])||empty($_GET['role'])||empty($_GET['status'])){
             _MainModel::viewJSON(["error"=>"Empty params"]);; 
     	}else{
     		$b = $_GET ['level'];
@@ -118,18 +116,18 @@ class Users extends _MainModel {
  		if(empty(_MainModel::$params_url ['id'])){
  			_MainModel::viewJSON(["Error"=>"Empty ID"]);
  	   }else{
-			$stmt = self::$db->prepare("SELECT * FROM dd_user_person_data JOIN dd_user_cards WHERE dd_user_cards.id = dd_user_person_data.id AND dd_user_person_data.id=:id");
-			$result_query = $stmt->execute(array(":id"=>_MainModel::$params_url ['id']));
-			$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-			_MainModel::viewJSON($rows);
+		   $stmt = self::$db->prepare("SELECT * FROM dd_user_person_data JOIN dd_user_cards WHERE dd_user_cards.id = dd_user_person_data.id AND dd_user_person_data.id=:id");
+	           $result_query = $stmt->execute(array(":id"=>_MainModel::$params_url ['id']));
+		   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		   _MainModel::viewJSON($rows);
  	   	}
  	}			
 //--------------------------------------------------------------------------------------------------------------------
 	public function getPDOAll (){
-			$stmt = self::$db->prepare("SELECT * FROM dd_user_cards JOIN dd_user_person_data WHERE dd_user_cards.id = dd_user_person_data.id");
-			$result_query = $stmt->execute(array());
-			$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-			_MainModel::viewJSON($rows);
+		   $stmt = self::$db->prepare("SELECT * FROM dd_user_cards JOIN dd_user_person_data WHERE dd_user_cards.id = dd_user_person_data.id");
+	           $result_query = $stmt->execute(array());
+		   $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	           _MainModel::viewJSON($rows);
 	}
 }
 ?>
