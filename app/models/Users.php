@@ -197,8 +197,7 @@ class Users extends _MainModel {
  	   	 else{
  	   	 
  	   	 }*/	
- 	   	$stmt = self::$db->prepare("SELECT * FROM dd_user_person_data
-        LEFT JOIN dd_user_cards ON dd_user_cards.id = dd_user_person_data.id AND dd_user_cards.id=:id");
+ 	   	$stmt = self::$db->prepare("SELECT * FROM dd_user_person_data dd_user_cards WHERE dd_user_cards.id = dd_user_person_data.id AND dd_user_person_data.id=:id");
 
 		$result_query = $stmt->execute(array(":id"=>_MainModel::$params_url ['id']));
 
