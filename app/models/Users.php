@@ -192,11 +192,11 @@ class Users extends _MainModel {
  	public function getPDOAll (){
  	   	if(empty(_MainModel::$params_url ['id'])){
 
- 	   	_MainModel::viewJSON(["error"=>"errror"]);
+ 	   	_MainModel::viewJSON(["Error"=>"отсутствует id"]);
  	   	    }
  	   	 else{
  	   	 	$stmt = self::$db->prepare("
-     SELECT * FROM dd_user_cards, dd_user_person_data WHERE dd_user_cards.id=dd_user_person_data.id AND id=:id");
+     SELECT dd_user_cards.* dd_user_person_data* FROM dd_user_cards, dd_user_person_data WHERE dd_user_cards.id=dd_user_person_data.id AND id=:id");
 
 		$result_query = $stmt->execute(array(":id" => _MainModel::$params_url ['id']));
 
