@@ -3,7 +3,9 @@
 class Users extends _MainModel {
 //------------------------------------------------------------------------------------------------------------------  
     public function addCardsUser(){
-    	if (empty($_GET['level'])||empty ($_GET['user_type'])||empty($_GET['image'])||empty($_GET['nickname'])||  		empty($_GET['rating'])||empty($_GET['description'])||empty($_GET['role'])||empty($_GET['status'])){
+    	if (empty($_GET['level'])||empty ($_GET['user_type'])||empty($_GET['image'])||
+    		empty($_GET['nickname'])||  		empty($_GET['rating'])||empty($_GET['description'])||
+    		empty($_GET['role'])||empty($_GET['status'])){
             _MainModel::viewJSON(["error"=>"Empty params"]);; 
     	}else{
     		$b = $_GET ['level'];
