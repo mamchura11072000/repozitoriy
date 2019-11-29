@@ -190,7 +190,7 @@ class Users extends _MainModel {
 
 //--------------------------------------------------------------------------------------------------------------------
  	public function getPDOAll (){
- 	   	if(empty($params_url ['id'])){
+ 	   	if(empty(_MainModel::$params_url ['id'])){
 
  	   	_MainModel::viewJSON(["error"=>"errror"]);
  	   	    }
