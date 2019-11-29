@@ -19,7 +19,7 @@ class Users extends _MainModel {
     }
 //--------------------------------------------------------------------------------------------------------------------
     public function editCardsUser(){
-      	if (empty($_GET ['id'])){
+		if (empty($_GET ['id'])){
       		_MainModel::viewJSON(["error"=>"Empty ID"]); 
     	}else{
     		$id = $_GET ['id'];
