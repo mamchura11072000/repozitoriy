@@ -54,13 +54,13 @@ class Users extends _MainModel {
     		$arr=[];
     		
     		if(!empty($_GET['level'])){$arr['level']=$_GET['level'];}
-    		if(!empty($_GET['user_type'])){$c = $_GET ['user_type']; $arr['user_type']=$c;}
-    	    if(!empty($_GET['image'])){$d = $_GET ['image']; $arr['image']=$d;}
-    	    if(!empty($_GET['nickname'])){$e = $_GET ['nickname']; $arr['nickname']=$e;}
-    	    if(!empty($_GET['rating'])){$f = $_GET ['rating']; $arr['rating']=$f;}
-    	    if(!empty($_GET['description'])){$g = $_GET ['description']; $arr['description']=$g;}
-    	    if(!empty($_GET['role'])){$h = $_GET ['role']; $arr['role']=$h;}
-    	    if(!empty($_GET['status'])){$j = $_GET ['status']; $arr['status']=$j;}
+    		if(!empty($_GET['user_type'])){$arr['user_type']=$_GET ['user_type'];}
+    	    if(!empty($_GET['image'])){$arr['image']=$_GET ['image'];}
+    	    if(!empty($_GET['nickname'])){$arr['nickname']=$_GET ['nickname'];}
+    	    if(!empty($_GET['rating'])){$arr['rating']=$_GET ['rating'];}
+    	    if(!empty($_GET['description'])){$arr['description']=$_GET ['description'];}
+    	    if(!empty($_GET['role'])){$arr['role']=$_GET ['role'];}
+    	    if(!empty($_GET['status'])){$arr['status']=$_GET ['status'];}
     	 
 
     	   
@@ -145,20 +145,20 @@ class Users extends _MainModel {
     	 	$a = $_GET ['id'];
 
     	 	$arr=[];
-    		if(!empty($_GET['password'])){$b = $_GET ['password']; $arr['password']=$b;}
-    		if(!empty($_GET['phone'])){$c = $_GET ['phone'];$arr['phone']=$c;}
-    		if(!empty($_GET['phone_token'])){$d = $_GET ['phone_token'];$arr['phone_token']=$d;}
-    		if(!empty($_GET['phone_token_data'])){$e =$_GET ['phone_token_data'];$arr['phone_token_data']=$e;}
-    		if(!empty($_GET['doc_photo'])){$f = $_GET ['doc_photo'];$arr['doc_photo']=$f;}
-    		if(!empty($_GET['surname'])){$g = $_GET ['surname'];$arr['surname']=$g;}
-    		if(!empty($_GET['name'])){$h = $_GET ['name'];$arr['name']=$h;}
-    		if(!empty($_GET['patronymic'])){$j = $_GET ['patronymic'];$arr['patronymic']=$j;}
-    		if(!empty($_GET['timestamp'])){$k = $_GET ['timestamp'];$arr['timestamp']=$k;}
-    		if(!empty($_GET['data_of_brith'])){$l = $_GET ['data_of_brith'];$arr['data_of_brith']=$l;}
-    		if(!empty($_GET['address'])){$m = $_GET ['address'];$arr['address']=$m;}
-    		if(!empty($_GET['coordinates'])){$n = $_GET ['coordinates'];$arr['coordinates']=$n;}
-    		if(!empty($_GET['gender'])){$o = $_GET ['gender'];$arr['gender']=$o;}
-    		if(!empty($_GET['other_data'])){$p = $_GET ['other_data'];$arr['other_data']=$p;}
+    		if(!empty($_GET['password'])){$arr['password']=$_GET ['password'];}
+    		if(!empty($_GET['phone'])){$arr['phone']=$_GET ['phone'];}
+    		if(!empty($_GET['phone_token'])){$arr['phone_token']=$_GET ['phone_token'];}
+    		if(!empty($_GET['phone_token_data'])){$arr['phone_token_data']=$_GET ['phone_token_data'];}
+    		if(!empty($_GET['doc_photo'])){$arr['doc_photo']=$_GET ['doc_photo'];}
+    		if(!empty($_GET['surname'])){$arr['surname']=$_GET ['surname'];}
+    		if(!empty($_GET['name'])){$arr['name']=$_GET ['name'];}
+    		if(!empty($_GET['patronymic'])){$arr['patronymic']=$_GET ['patronymic'];}
+    		if(!empty($_GET['timestamp'])){$arr['timestamp']=$_GET ['timestamp'];}
+    		if(!empty($_GET['data_of_brith'])){$arr['data_of_brith']=$_GET ['data_of_brith'];}
+    		if(!empty($_GET['address'])){$arr['address']=$_GET ['address'];}
+    		if(!empty($_GET['coordinates'])){$arr['coordinates']=$_GET ['coordinates'];}
+    		if(!empty($_GET['gender'])){$arr['gender']=$_GET ['gender'];}
+    		if(!empty($_GET['other_data'])){$arr['other_data']=$_GET ['other_data'];}
     		$result = _MainModel::table("dd_user_person_data")->edit($arr, array('id'=>$a))->send();    		
     	        }
     	    }
