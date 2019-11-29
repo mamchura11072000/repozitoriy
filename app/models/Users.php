@@ -20,7 +20,7 @@ class Users extends _MainModel {
 //--------------------------------------------------------------------------------------------------------------------
     public function editCardsUser(){
       	if (empty($_GET ['id'])){
-    		_MainModel::viewJSON(["error"=>"Empty ID"]); 
+      		_MainModel::viewJSON(["error"=>"Empty ID"]); 
     	}else{
     		$id = $_GET ['id'];
     		$arr=[];
@@ -116,10 +116,10 @@ class Users extends _MainModel {
  		if(empty(_MainModel::$params_url ['id'])){
  			_MainModel::viewJSON(["Error"=>"Empty ID"]);
  	   }else{
- 	   		$stmt = self::$db->prepare("SELECT * FROM dd_user_person_data JOIN dd_user_cards WHERE dd_user_cards.id = dd_user_person_data.id AND dd_user_person_data.id=:id");
- 	   		$result_query = $stmt->execute(array(":id"=>_MainModel::$params_url ['id']));
- 	   		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
- 	   		_MainModel::viewJSON($rows);
+			$stmt = self::$db->prepare("SELECT * FROM dd_user_person_data JOIN dd_user_cards WHERE dd_user_cards.id = dd_user_person_data.id AND dd_user_person_data.id=:id");
+			$result_query = $stmt->execute(array(":id"=>_MainModel::$params_url ['id']));
+			$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			_MainModel::viewJSON($rows);
  	   	}
  	}			
 //--------------------------------------------------------------------------------------------------------------------
