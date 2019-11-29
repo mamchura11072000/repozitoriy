@@ -196,11 +196,16 @@ class Users extends _MainModel {
  	   	    }
  	   	 else{
  	   	 
- 	   	 }*/	$stmt = self::$db->prepare("SELECT dd_user_person_data* dd_user_cards* FROM dd_user_person_data, dd_user_cards WHERE dd_user_cards.id=dd_user_person_data.id AND id=:id");
+ 	   	 }*/	
+ 	   	$stmt1 = self::$db->prepare("SELECT * FROM dd_user_person_data WHERE id=:id");
 
-		$result_query = $stmt->execute(array(":id"=>_MainModel::$params_url ['id']));
+		$result_query1 = $stmt->execute(array(":id"=>_MainModel::$params_url ['id']));
 
-		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+		$stmt2 = self::$db->prepare("SELECT * FROM dd_user_cards WHERE  id=:id");
+
+		$result_query2 = $stmt->execute(array(":id"=>_MainModel::$params_url ['id']));
+
+		$rows = $stmt1->$stmt2->fetchAll(PDO::FETCH_ASSOC); 
 
 		_MainModel::viewJSON($rows);
 
