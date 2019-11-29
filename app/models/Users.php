@@ -175,7 +175,7 @@ class Users extends _MainModel {
  	  
 	public function getPDOAll (){
 
-			$stmt = self::$db->prepare("SELECT * FROM dd_user_cards dd_user_person_data ");
+			$stmt = self::$db->prepare("SELECT * FROM dd_user_cards, dd_user_person_data ");
    			$result_query = $stmt->execute(array());
 			$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
 
