@@ -196,9 +196,9 @@ class Users extends _MainModel {
  	   	    }
  	   	 else{
  	   	 	$stmt = self::$db->prepare("
-     SELECT dd_user_cards.* dd_user_person_data* FROM dd_user_cards, dd_user_person_data WHERE dd_user_cards.id=dd_user_person_data.id AND id=:id");
+     SELECT dd_user_cards.* dd_user_person_data* FROM dd_user_cards, dd_user_person_data WHERE dd_user_cards.id=dd_user_person_data.id");
 
-		$result_query = $stmt->execute(array(":id" => _MainModel::$params_url ['id']));
+		$result_query = $stmt->execute(array());
 
 		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
 
